@@ -3,14 +3,14 @@
 <head>
 	<title>Hyperloop India</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="assets/css/nprogress.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
-	<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-	<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css" />
+	<link href="https://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -93,7 +93,7 @@
 					   
 					    <p class="vjs-no-js">
 					      To view this video please enable JavaScript, and consider upgrading to a web browser that
-					      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 					    </p>
 					  </video>
 				</div>
@@ -115,35 +115,35 @@
 			<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 				<div class="col-md-12">					
 
-		<!--
+		
 				 <div class="owl-carousel owl-theme">
 		            <div class="item-video" data-merge="3">
-		              <a class="owl-video" href="http://vimeo.com/23924346"></a> 
+		              <a class="owl-video" href="https://vimeo.com/23924346"></a> 
 		            </div>
 		            <div class="item-video" data-merge="1">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=JpxsRwnRwCQ"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a> 
 		            </div>
 		            <div class="item-video" data-merge="2">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=FBu_jxT1PkA"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a> 
 		            </div>
 		            <div class="item-video" data-merge="1">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=oy18DJwy5lI"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a> 
 		            </div>
 		            <div class="item-video" data-merge="2">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=H3jLkJrhHKQ"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a> 
 		            </div>
 		            <div class="item-video" data-merge="3">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=g3J4VxWIM6s"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a> 
 		            </div>
 		            <div class="item-video" data-merge="1">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=0fhoIate4qI"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a> 
 		            </div>
 		            <div class="item-video" data-merge="2">
-		              <a class="owl-video" href="http://www.youtube.com/watch?v=EF_kj2ojZaE"></a> 
+		              <a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a> 
 		            </div>
 		          </div>
 
--->
+
 					
 				</div>				
 			</div>
@@ -246,8 +246,8 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-4 col-xs-4 "><h3>CS50X</h3></div>
-							<div class="col-md-2 hidden-xs hidden-sm"><h3><img class="img-responsive img-small" src="http://docs.edx.org/edx-docs/assets/images/logo-edx.png"></h3></div>
-							<div class="col-md-2 col-xs-4"><h3><img class="img-responsive img-small" src="http://www.logosurfer.com/sites/default/files/harvard-logo_0.png"></h3></div>
+							<div class="col-md-2 hidden-xs hidden-sm"><h3><img class="img-responsive img-small" src="https://docs.edx.org/edx-docs/assets/images/logo-edx.png"></h3></div>
+							<div class="col-md-2 col-xs-4"><h3><img class="img-responsive img-small" src="https://www.logosurfer.com/sites/default/files/harvard-logo_0.png"></h3></div>
 							<div class="col-md-2 col-xs-2"><h3>99%</h3></div>
 							<div class="col-md-2 col-xs-1"><h3><i class="color-primary fa fa-dot-circle-o"></i></h3></div>
 						</div>
@@ -372,8 +372,8 @@
 
 <script src="bundle.js" type="text/javascript"></script>
 <script src="assets/js/sine.js" type="text/javascript"></script>
-<script src="/node_modules/owl.carousel/dist/owl.carousel.js"></script>
-<script src="http://ecounsellors.in/js/wow.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script src="https://ecounsellors.in/js/wow.min.js" type="text/javascript"></script>
 
 
 
