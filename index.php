@@ -118,18 +118,28 @@
 
 		
 				<div class="owl-carousel owl-theme">
-				    <div class="item"><h4>1</h4></div>
-				    <div class="item"><h4>2</h4></div>
-				    <div class="item"><h4>3</h4></div>
-				    <div class="item"><h4>4</h4></div>
-				    <div class="item"><h4>5</h4></div>
-				    <div class="item"><h4>6</h4></div>
-				    <div class="item"><h4>7</h4></div>
-				    <div class="item"><h4>8</h4></div>
-				    <div class="item"><h4>9</h4></div>
-				    <div class="item"><h4>10</h4></div>
-				    <div class="item"><h4>11</h4></div>
-				    <div class="item"><h4>12</h4></div>
+				    <div class="card_org item">
+				    	 <video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/rotate.jpg">
+					    <source src="/assets/video/rotate.mp4" type='video/mp4'>
+					   
+					    <p class="vjs-no-js">
+					      To view this video please enable JavaScript, and consider upgrading to a web browser that
+					      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					    </p>
+					  </video>
+				    </div>
+				    <div class="card_org item" >
+				    	 <video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/open.jpg">
+					    <source src="/assets/video/open.mp4" type='video/mp4'>
+					   
+					    <p class="vjs-no-js">
+					      To view this video please enable JavaScript, and consider upgrading to a web browser that
+					      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					    </p>
+					  </video>
+				    </div>
+				  
+				    
 				</div>
 
 
@@ -375,9 +385,12 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.owl-carousel').owlCarousel({
+			items:1.5,
 			loop:true,
 			margin:10,
 			nav:true,
+			lazyLoad:true,
+			center:true,
 			responsive:{
 				0:{
 					items:1
