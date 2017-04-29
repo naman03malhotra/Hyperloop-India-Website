@@ -1,0 +1,27 @@
+{
+  "name": "hyperloop",
+  "version": "1.0.0",
+  "description": "Hyperloop India website",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify assets/js/app.js -o bundle.js",
+    "watch": "watchify assets/js/app.js -o bundle.js",
+    "uglify": "uglifyjs bundle.js > bundle.min.js",
+    "buildx": "npm run build && npm run uglify && npm run watch"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "particles.js": "^2.0.0",
+    "video.js": "^5.19.2",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "jquery-scrollify": "^1.0.7",
+    "nprogress": "^0.2.0",
+    "particles.js": "^2.0.0"
+  },
+  "author": "Naman",
+  "license": "ISC"
+}
