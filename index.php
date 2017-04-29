@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<link href="https://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
