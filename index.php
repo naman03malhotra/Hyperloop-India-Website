@@ -70,7 +70,7 @@
 		<canvas id="waves"></canvas>
 
 		<div id="top-content" class="wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.5s">
-			<h1 class="color-black">ACCERLERATING INDIA</h1><br>
+			<h1 class="color-black">ACCELERATING INDIA</h1><br>
 			<h4 id="texter">
 				<i class='fa fa-quote-left'></i> Something classy about us ...<i class='fa fa-quote-right'></i>
 			</h4>
