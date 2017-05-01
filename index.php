@@ -20,22 +20,19 @@
 
 <body>
 	
-<div class='preloader'>
-  <ul class="cssload-body">
-    <li class='one'></li>
-    <li class='two'></li>
-    <li class='three'></li>
-    <li class='four'></li>
-    <li class='five'></li>
-  </ul>
-</div>
+	<div class='preloader'>
+		<ul class="cssload-body">
+			<li class='one'></li>
+			<li class='two'></li>
+			<li class='three'></li>
+			<li class='four'></li>
+			<li class='five'></li>
+		</ul>
+	</div>
+
 	<header id="header-top" class="sections">
 
 		<div id="part"></div>
-
-
-
-
 
 		<nav class="navbar navbar-inverse navbar-findcond">
 			<div class="container">
@@ -53,11 +50,12 @@
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right">
 
-						<li class="hvr-underline-from-center"><a href="#ninja">VISION</a></li>
+						<li class="hvr-underline-from-center"><a href="#vision">VISION</a></li>
 
-						<li class="hvr-underline-from-center"><a href="#journey">WORK</a></li>
+						<li class="hvr-underline-from-center"><a href="#design">DESIGN</a></li>
 
-						<li class="hvr-underline-from-center"><a href="#smallProjects">PEOPLE</a></li>
+						<li class="hvr-underline-from-center"><a href="#work">WORK</a></li>
+						<li class="hvr-underline-from-center"><a href="#people">PEOPLE</a></li>
 						<li class="hvr-underline-from-center"><a href="#resume">JOIN US</a></li>
 						<li class="hvr-underline-from-center"><a href="#resume">ENGAGE</a></li>
 						<!-- <li class="hvr-float-shadow active"><a href="#contact">Connect</a></li> -->
@@ -71,7 +69,9 @@
 
 		<div id="top-content" class="wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.5s">
 			<h1 class="color-black">ACCERLERATING INDIA</h1><br>
-			<h4 id="texter"><i class='fa fa-quote-left'></i> Something classy about us ...<i class='fa fa-quote-right'></i></h4>
+			<h4 id="texter">
+				<i class='fa fa-quote-left'></i> Something classy about us ...<i class='fa fa-quote-right'></i>
+			</h4>
 			
 		</div>
 
@@ -79,7 +79,7 @@
 
 
 	
-	<section class="sectionsFull" id="ninja">
+	<section class="sectionsFull" id="vision">
 		<div class="container-fluid">
 			<div class="row">
 				<h3 class="section-heading text-center">
@@ -87,393 +87,442 @@
 				</h3>
 				<hr class="primary">
 			</div>
-		 	<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-				<div class="col-md-12">
-					 <video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/1.jpg">
-					    <source src="/assets/video/final1.mp4" type='video/mp4'>
-					   
-					    <p class="vjs-no-js">
-					      To view this video please enable JavaScript, and consider upgrading to a web browser that
-					      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					    </p>
-					  </video>
-				</div>
-			</div>	
-			
-		</div>
-	</section>
-
-
-	<section class="sections" id="journey">
-		<div class="container-fluid">
-
-			<div class="row">
-				<h3 class="section-heading text-center">
-					Design		
-				</h3>
-				<hr class="primary">
-			</div>
 			<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-				<div class="col-md-12">					
+				<div class="col-md-12">
+					<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/1.jpg">
+						<source src="/assets/video/final1.mp4" type='video/mp4'>
 
-		
-				<div class="owl-carousel owl-theme">
-				    <div class="card_org item">
-				    	 <video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/rotate.jpg">
-					    <source src="/assets/video/rotate.mp4" type='video/mp4'>
-					   
-					    <p class="vjs-no-js">
-					      To view this video please enable JavaScript, and consider upgrading to a web browser that
-					      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					    </p>
-					  </video>
-				    </div>
-				    <div class="card_org item" >
-				    	 <video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/open.jpg">
-					    <source src="/assets/video/open.mp4" type='video/mp4'>
-					   
-					    <p class="vjs-no-js">
-					      To view this video please enable JavaScript, and consider upgrading to a web browser that
-					      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-					    </p>
-					  </video>
-				    </div>
-				  
-				    
+							<p class="vjs-no-js">
+								To view this video please enable JavaScript, and consider upgrading to a web browser that
+								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+							</p>
+						</video>
+					</div>
+				</div>	
+
+			</div>
+		</section>
+
+
+		<section class="sections" id="design">
+			<div class="container-fluid">
+
+				<div class="row">
+					<h3 class="section-heading text-center">
+						Design		
+					</h3>
+					<hr class="primary">
 				</div>
+				<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+					<div class="col-md-12">					
+
+
+						<div class="owl-carousel owl-theme">
+							<div class="card_org item">
+								<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/rotate.jpg">
+									<source src="/assets/video/rotate.mp4" type='video/mp4'>
+
+										<p class="vjs-no-js">
+											To view this video please enable JavaScript, and consider upgrading to a web browser that
+											<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+										</p>
+									</video>
+								</div>
+								<div class="card_org item" >
+									<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/open.jpg">
+										<source src="/assets/video/open.mp4" type='video/mp4'>
+
+											<p class="vjs-no-js">
+												To view this video please enable JavaScript, and consider upgrading to a web browser that
+												<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+											</p>
+										</video>
+									</div>
+
+
+								</div>
+
+
+
+							</div>				
+						</div>
+
+
+
+
+					</div>
+				</section>
+
+
+
+				<section class="sections" id="work">
+					<div class="container-fluid backdrop">
+
+						<div class="row">
+							<h3 class="section-heading text-center color-white">
+								Work		
+							</h3>
+							<hr class="primary-white">
+						</div>
+						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+							<div class="col-md-12">		
+								<div class="owl-carousel-work owl-theme">
+									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
+									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
+									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
+									
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+				
+				<section class="sections" id="team">
+					<div class="container-fluid">
+
+						<div class="row">
+							<h3 class="section-heading text-center">
+								Team		
+							</h3>
+							<hr class="primary">
+						</div>
+						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+							<div class="col-md-12">		
+								<div class="owl-carousel-team owl-theme">
+									<div class="item card_org text-center"><img class="" src="assets/img/bits.png"></div>
+									<div class="item card_org text-center"><img class="" src="assets/img/iim.png"></div>
+									<div class="item card_org text-center"><img class="" src="assets/img/nid.png"></div>
+									<div class="item card_org text-center"><img class="" src="assets/img/nsit.png"></div>
+									<div class="item card_org text-center"><img class="" src="assets/img/isb.png"></div>
+									<div class="item card_org text-center"><img class="" src="assets/img/others.png"></div>
+									
+								</div>
+
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<button id="dwl_hit" class="btn btn-primary btn-lg btn-block"> Meet The People</button></div>
+							</div>
+
+						</div>
+					</section>
+
+					<section class="sections" id="join">
+						<div class="container-fluid backdrop">
+
+							<div class="row">
+								<h3 class="section-heading text-center color-white">
+									Join Us		
+								</h3>
+								<hr class="primary-white">
+							</div>
+							<br>
+							<br>
+							<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+								<div class="col-md-12 text-center">		
+									<h1>Dare to Dream?</h1>
+
+								</div>
+							</div>
+							<br>
+							<br>
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3">
+									<button id="dwl_hit" class="btn btn-big-re btn-lg btn-block"> Apply</button></div>
+								</div>
+
+							</div>
+						</section>
+						<section class="sections" id="partners">
+							<div class="container-fluid">
+
+								<div class="row">
+									<h3 class="section-heading text-center">
+										Our Partners		
+									</h3>
+									<hr class="primary">
+								</div>
+								<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+									<div class="col-md-12">		
+										<div class="owl-carousel-team owl-theme">
+
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="ecoun" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+											<div class="item text-center">
+												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
+
+													<div class="project-details-wrapper">
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<br>
+														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
+														<br>
+														<br>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
+													</div>
+													<div class="project-overlay"></div>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+								<br>
+								<br>
+
+
+							</div>
+						</section>
+
+
+
+
+
+						<section class="sectionsFull" id="contact">
+							<div class="container-fluid">
+								<div class="row">
+									<h3 class="section-heading text-center color-white">
+										Say Hello	
+									</h3>
+									<hr class="primary-white">
+								</div>
+								<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+									<div class="col-md-4"></div>
+									<div class="col-md-4 "><a id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp;Connect</a></div>
+
+								</div>
+							</div>
+
+						</section>
 
 
 					
-				</div>				
-			</div>
 
-			
-			
+						
 
-		</div>
-	</section>
+						<footer id="foot">
+							<div class="container-fluid">
+								<div class="col-md-10 col-md-offset-1">
+									<div class="col-md-5">
+										<a href="/"><img src="/assets/img/logo.png" style="width:300px;filter: invert(100%);"></a>
+										<h4 class="footer-a">A STEP TOWARDS BRINGING THE HYPERLOOP TO INDIA.</h4>
 
-
-<section class="sections" id="smallProjects">
-	<div class="container-fluid">
-
-		<div class="row">
-			<h3 class="section-heading text-center color-white">
-				Projects		
-			</h3>
-			<hr class="primary-white">
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			<div class="col-md-6">					
+									</div>
+									<div class="col-md-2">
+										<h3 class="footer-heading">Links</h3>
+										<a href="/blog" class="footer-a" title="Blog">Blog</a><br>
+										<a href="/contact-us" class="footer-a" title="Contact Us">Contact Us</a><br>
+										
 
 
+									</div>
+									<div class="col-md-2">
+										<h3 class="footer-heading">Contact Us</h3>										
+										<a href="#" class="footer-a"> +91-8285526828</a><br>
 
-				<div class="card project-wrapper hvr-float-shadow">
-
-					<div class="project-details-wrapper">
-						<h2><a href="#" target="_blank"><p>www.ecounsellors.in</p></a></h2> <p class="pull-right">APR 15' - JAN' 16</p> <p><i>(Co-founder / Tech. Lead)</i></p> 
-						<br>
-						<span> Econsellors is a service provider dedicated to helping people to make smart career choices by bridging the gap between a Mentor and a Mentee with an appointment booking system through real time communication via self-implemented audio, video and chat modes. </span>
-						<br>
-						<br>
-						<a href="#" class="btn btn-default"> Visit </a> <a  id="ecoun" class="btn know btn-default"> Know More </a>
-					</div>
-					<div class="project-overlay"></div>
-				</div>
-
-
-
-			</div>				
-
-			<div class="col-md-6">					
+									</div>
+									<div class="col-md-3">
+										<h3 class="footer-heading">Follow Us</h3>
+										<a href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/6rqi2h839/1458285314_square_twitter.png?noCache=1458269179"></a> &nbsp; 
+										<a target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s9.postimg.org/rpxq1v24r/1458285359_square_google_plus.png?noCache=1458269237"></a> &nbsp;
+										<a  target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/o93sp2nn9/1458285377_square_linkedin.png?noCache=1458269268"></a> 
+										&nbsp;
+										<a  target="_blank" href="https://www.facebook.com/hyperloopindia/" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s29.postimg.org/d32lll3ur/1458285303_square_facebook.png?noCache=1458269107"></a> <br>
+										<p style="margin-top: 20px;">
 
 
-				
-				<div class="card project-wrapper hvr-float-shadow">
-					
-					<div class="project-details-wrapper">
-						<h2><a href="#" target="_blank"><p>www.ecounsellors.in</p></a></h2> <p class="pull-right">APR 15' - JAN' 16</p> <p><i>(Co-founder / Tech. Lead)</i></p> 
-						<br>
-						<span> Econsellors is a service provider dedicated to helping people to make smart career choices by bridging the gap between a Mentor and a Mentee with an appointment booking system through real time communication via self-implemented audio, video and chat modes. </span>
-						<br>
-						<br>
-						<a href="#" class="btn btn-default"> Visit </a> <a  id="ecoun" class="btn know btn-default"> Know More </a>
-					</div>
-					<div class="project-overlay"></div>
-				</div>
-
-
-				
-			</div>				
-
-
-		</div>
-
-	</div>
-</section>
+											<a class="btn btn-lg footer-button footer-a" target="_blank" href="https://mail.google.com/mail/?view=cm&ui=2&tf=0&fs=1&to=info@hyperloopindia.in&su=Hi I am seeking for help.&body=My query is regarding ___"> info@hyperloopindia.in</a> <br><br>
 
 
 
 
 
-<section class="sections" id="courses">
-	<div class="container-fluid">
-		<div class="row">
-			<h3 class="section-heading text-center">
-				Courses		
-			</h3>
-			<hr class="primary">
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			<div class="col-md-12">					
-				<div class="card_org" style="background-color: #00BCD4;">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4 col-xs-4"><h3 style="color: #fff;">Course <i class="fa fa-info-circle hidden-xs"></i></h3></div>
-							<div class="col-md-2 hidden-xs hidden-sm"><h3 style="color: #fff;"><i class="fa fa-graduation-cap"></i></h3></div>
-							<div class="col-md-2 col-xs-4"><h3 style="color: #fff;"><i class="fa fa-university"></i></h3></div>
-							<div class="col-md-2 col-xs-2"><h3 style="color: #fff;"><i class="fa fa-percent"></i></h3></div>
-							<div class="col-md-2 col-xs-1"><h3 style="color: #fff;"><i class="fa fa-question-circle"></i></h3></div>
+
+
+
+										</p>
+
+									</div>
+								</div>
+							</div>
+
+						</footer>
+						<div class="container-fluid footer-end">
+							<div class="col-md-12 text-center">
+								<i class="fa fa-copyright"></i> 2017 Hyperllop India/ <a target="_blank" class="footer-a" / <a target="_blank" class="footer-a" href="/terms-and-conditions">Terms & Conditions</a> / <a target="_blank" class="footer-a" href="/privacy-policy">Privacy Policy</a>
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-			<div class="col-md-12">					
-				<div class="card_org">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4 col-xs-4 "><h3>CS50X</h3></div>
-							<div class="col-md-2 hidden-xs hidden-sm"><h3><img class="img-responsive img-small" src="https://docs.edx.org/edx-docs/assets/images/logo-edx.png"></h3></div>
-							<div class="col-md-2 col-xs-4"><h3><img class="img-responsive img-small" src="https://www.logosurfer.com/sites/default/files/harvard-logo_0.png"></h3></div>
-							<div class="col-md-2 col-xs-2"><h3>99%</h3></div>
-							<div class="col-md-2 col-xs-1"><h3><i class="color-primary fa fa-dot-circle-o"></i></h3></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-			<div class="col-md-12">
-				<div class="card_org">
-					<div class="row">
-						<div class="col-md-5"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-1"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-			<div class="col-md-12">
-				<div class="card_org">
-					<div class="row">
-						<div class="col-md-5"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-1"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
-			<div class="col-md-12">
-				<div class="card_org">
-					<div class="row">
-						<div class="col-md-5"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2"></div>
-						<div class="col-md-1"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="sections" id="skills">
-	<div class="container-fluid">
-
-		<div class="row">
-			<h3 class="section-heading text-center">
-				Few Things I Know
-			</h3>
-			<hr class="primary">
-		</div>
-
-		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			<button class="btn btn-primary my-skills btn-lg">PHP</button>
-			<button class="btn btn-primary my-skills btn-lg">HTML</button>
-			<button class="btn btn-primary my-skills btn-lg">RUBY</button>
-			<button class="btn btn-primary my-skills btn-lg">JS/jQuery</button>
-			<button class="btn btn-primary my-skills btn-lg">Python</button>
-		</div>
-	</div>
-
-</section>
 
 
-<section class="sectionsFull" id="resume">
-
-	<div class="container-fluid">
-		<div class="row">
-			<h3 class="section-heading text-center color-white">
-				Resume
-			</h3>
-			<hr class="primary-white">
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			<div class="col-md-4"></div>
-			<div class="col-md-4 "><button id="dwl_hit" class="btn btn-big-blue btn-lg btn-block"><span class="fa fa-download"></span>&nbsp; Download</button></div>
-
-		</div>
-	</div>
-</section>
-
-<section class="sectionsFull" id="contact">
-	<div class="container-fluid">
-		<div class="row">
-			<h3 class="section-heading text-center color-white">
-				Let's Connect	
-			</h3>
-			<hr class="primary-white">
-		</div>
-		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			<div class="col-md-4"></div>
-			<div class="col-md-4 "><a id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp;Connect</a></div>
-
-		</div>
-	</div>
-
-</section>
-
-
-<footer class="sections">
-
-	<div class="container-fluid wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-		<div class="row text-center">
-			<a href="#header-top" id="heart_hit"><span class="color-danger" style="font-size: 10vh;"><i class="fa fa-heart fa fa-heart animated rubberBand infinite"></i></span></a>
-
-		</div>
-		<div class="row" style="background-color: #00BCD4;">
-			<div class="col-md-12 text-center"><h5 class="color-white"><i class="fa fa-copyright"></i> Naman Malhotra 2016 </h5></div>
-		</div>
-	</div>
-
-
-</footer>
-
-
-<script src="bundle.js" type="text/javascript"></script>
-<script src="assets/js/sine.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-<script src="https://ecounsellors.in/js/wow.min.js" type="text/javascript"></script>
+						<script src="bundle.js" type="text/javascript"></script>
+						<script src="assets/js/sine.js" type="text/javascript"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+						<script src="https://ecounsellors.in/js/wow.min.js" type="text/javascript"></script>
 
 
 
 
-</body>
-</html>
+					</body>
+					</html>
 
 
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('.owl-carousel').owlCarousel({
-			items:1.5,
-			loop:true,
-			margin:10,
-			nav:true,
-			lazyLoad:true,
-			center:true,
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:3
-				},
-				1000:{
-					items:5
-				}
-			}
-		})
-	});
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$('.owl-carousel').owlCarousel({
+								items:1.5,
+								loop:true,
+								margin:10,
+								nav:true,
+								lazyLoad:true,
+								center:true,
+								responsive:{
+									0:{
+										items:1
+									},
+									600:{
+										items:3
+									},
+									1000:{
+										items:5
+									}
+								}
+							})
+						});
+						$(document).ready(function() {
+							$('.owl-carousel-work').owlCarousel({
+								items:1,
+								loop:true,
+								margin:10,
+								autoplay:true,
+								autoplayTimeout:4000,
+								autoplayHoverPause:true,
+								responsive:{
+									0:{
+										items:1
+									},
+									600:{
+										items:3
+									},
+									1000:{
+										items:5
+									}
+								}
+							})
 
-// 	var rand = 2.3; 
-// 	var rand_speed = rand/10;
+							$('.owl-carousel-work').trigger('play.owl.autoplay',[2000])
+						});
+						$(document).ready(function() {
+							$('.owl-carousel-team').owlCarousel({
+								items:4,
+								loop:true,
+								margin:10,
+								autoplay:true,
+								autoplayTimeout:4000,
+								autoplayHoverPause:true,
+
+							})
+
+							$('.owl-carousel-team').trigger('play.owl.autoplay',[2000])
+						});
 
 
-// 	(function($) {
-// 		"use strict"; 
+						(function($) {
+							"use strict"; 
 
 
-// 		new WOW().init();
+							new WOW().init();
 
-// 	})(jQuery); 
-
-// 	var waves = new SineWaves({
-// 		el: document.getElementById('waves'),
-
-// 		speed: 4,
-
-// 		width: function() {
-// 			return $(window).width();
-// 		},
-
-// 		height: function() {
-// 			return $(window).height();
-// 		},
-
-// 		ease: 'SineInOut',
-
-// 		wavesWidth: '500%',
-
-
-
-// 		waves: [
-// 		{
-// 			timeModifier: 1+rand_speed,
-// 			lineWidth: 100*rand,
-// 			amplitude: -100*rand/2,
-// 			wavelength: 100*rand
-// 		},
-// 		{
-// 			timeModifier: 1.01+rand_speed,
-// 			lineWidth: 110*rand,
-// 			amplitude: -110*rand/2,
-// 			wavelength: 100*rand
-// 		}
-
-// 		],
-
-//   // Called on window resize
-//   resizeEvent: function() {
-//   	var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
-//   	gradient.addColorStop(0,"rgba(23, 210, 168, 0.2)");
-//   	gradient.addColorStop(0.5,"rgba(255, 255, 255, 0.5)");
-//   	gradient.addColorStop(1,"rgba(23, 210, 168, 0.2)");
-
-//   	var index = -1;
-//   	var length = this.waves.length;
-//   	while(++index < length){
-//   		this.waves[index].strokeStyle = gradient;
-//   	}
-
-//     // Clean Up
-//     index = void 0;
-//     length = void 0;
-//     gradient = void 0;
-// }
-// });
+						})(jQuery); 
 
 
 
 
 
-</script>
+					</script>
