@@ -55,9 +55,11 @@
 						<li class="hvr-underline-from-center"><a href="#design">DESIGN</a></li>
 
 						<li class="hvr-underline-from-center"><a href="#work">WORK</a></li>
-						<li class="hvr-underline-from-center"><a href="#people">PEOPLE</a></li>
-						<li class="hvr-underline-from-center"><a href="#resume">JOIN US</a></li>
-						<li class="hvr-underline-from-center"><a href="#resume">ENGAGE</a></li>
+						<li class="hvr-underline-from-center"><a href="#join">JOIN US</a></li>
+						<li class="hvr-underline-from-center"><a href="#team">PEOPLE</a></li>
+						<li class="hvr-underline-from-center"><a href="#join">JOIN US</a></li>
+						<li class="hvr-underline-from-center"><a href="#partners">PARTNERS</a></li>
+						<li class="hvr-underline-from-center"><a href="#contact">CONTACT</a></li>
 						<!-- <li class="hvr-float-shadow active"><a href="#contact">Connect</a></li> -->
 
 					</ul>
@@ -236,7 +238,7 @@
 								</div>
 
 							</div>
-						</section>
+					</section>
 						<section class="sections" id="partners">
 							<div class="container-fluid">
 
@@ -374,7 +376,7 @@
 								</div>
 								<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 									<div class="col-md-4"></div>
-									<div class="col-md-4 "><a id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp;Connect</a></div>
+									<div class="col-md-4 "><a target="_blank" id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp;Connect</a></div>
 
 								</div>
 							</div>
@@ -382,7 +384,7 @@
 						</section>
 
 
-					
+
 
 						
 
@@ -456,7 +458,7 @@
 					<script type="text/javascript">
 						$(document).ready(function() {
 							$('.owl-carousel').owlCarousel({
-								items:1.5,
+								items:2,
 								loop:true,
 								margin:10,
 								nav:true,

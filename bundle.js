@@ -22,6 +22,12 @@ var particlesJS = require('particlesJS');
  * Bootstrap loading
  */
 
+var isMobile = false; //initiate as false
+// device detection
+if (/Mobi/.test(navigator.userAgent))
+	isMobile = true;
+
+
  var bootstrap = require('bootstrap');
 
  var videojs = require('video.js'); 
@@ -55,9 +61,18 @@ function checkScroll() {
     }
 
 }
+if(!isMobile)
+{
+	window.addEventListener('scroll', checkScroll, false);
+	window.addEventListener('resize', checkScroll, false);
 
-// window.addEventListener('scroll', checkScroll, false);
-// window.addEventListener('resize', checkScroll, false);
+	$('#con_hit').attr('href', 'https://mail.google.com/mail/?view=cm&ui=2&tf=0&fs=1&to=naman03malhotra@gmail.com&su=Hi, ..................................&body=.................\n..............\n............');
+}
+else
+{
+	$('#con_hit').attr('href', 'mailto:naman03malhotra@gmail.com?subject=Hi,...................&body=Hi, .....................\n....................\n...................................\n..............................');
+
+}
 
 // require('is-in-viewport')
 
@@ -227,10 +242,6 @@ $(function() {
  {
  	return Math.floor(Math.random() * (max - min + 1)) + min;
  }
-var isMobile = false; //initiate as false
-// device detection
-if (/Mobi/.test(navigator.userAgent))
-	isMobile = true;
 
 
 
