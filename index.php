@@ -259,7 +259,7 @@
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
 														<br>
-														<a href="#" class="btn btn-default"> Visit </a> <a  id="ecoun" class="btn know btn-default"> Know More </a>
+														<a href="#" class="btn btn-default"> Visit </a> <a  id="hyper" class="btn know btn-default"> Know More </a>
 													</div>
 													<div class="project-overlay"></div>
 												</div>
