@@ -34,6 +34,12 @@ if (/Mobi/.test(navigator.userAgent))
 
 var player = videojs('my-video');
 
+
+$(function(){
+	// video2[0].play();
+	// video3[0].play();
+})
+
 var videos = $('#my-video_html5_api'),
 fraction = -0.2;
 function checkScroll() {
@@ -65,11 +71,11 @@ if(!isMobile)
 	window.addEventListener('scroll', checkScroll, false);
 	window.addEventListener('resize', checkScroll, false);
 
-	$('#con_hit').attr('href', 'https://mail.google.com/mail/?view=cm&ui=2&tf=0&fs=1&to=naman03malhotra@gmail.com&su=Hi, ..................................&body=.................\n..............\n............');
+	$('#con_hit').attr('href', 'https://mail.google.com/mail/?view=cm&ui=2&tf=0&fs=1&to=info@hyperloopindia.in&su=Hello Hyperloop India!&body=Send your query to us.');
 }
 else
 {
-	$('#con_hit').attr('href', 'mailto:naman03malhotra@gmail.com?subject=Hi,...................&body=Hi, .....................\n....................\n...................................\n..............................');
+	$('#con_hit').attr('href', 'mailto:info@hyperloopindia.in?subject=Hello Hyperloop India!&body=Send your query to us.');
 
 }
 
@@ -194,6 +200,13 @@ $(window).on('load', function() {
 	setTimeout(function() {
 
 		$(".preloader").delay(500).fadeOut("slow");
+
+		var video2 = $('#my-video-design-1_html5_api')[0];
+		var video3 = $('#my-video-design-2_html5_api')[0];
+
+		video2.play();
+		video3.play();
+
 
 
 	}, 500);

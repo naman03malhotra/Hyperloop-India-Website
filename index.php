@@ -11,6 +11,7 @@
 	<link href="https://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,7 +45,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#" title="Activate Lazy Scrolling ">
-						<img class="img-responsive" style="width: 180px;margin-top: -10px;" src="/assets/img/logo.png">
+						<img class="img-responsive" style="width: 225px;margin-top: -11px;" src="/assets/img/logo.png">
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
@@ -74,8 +75,34 @@
 			<h4 id="texter">
 				<i class='fa fa-quote-left'></i> Something classy about us ...<i class='fa fa-quote-right'></i>
 			</h4>
+
+			<style type="text/css">
+				.cta button {
+					background-color: transparent;
+					border: 1px solid white; 
+					font-weight: 600;
+					border-radius: 20px; 
+					outline: none !important;
+				}
+
+				.modal.fade{
+					opacity:1;
+				}
+				.modal.fade .modal-dialog {
+					-webkit-transform: translate(0);
+					-moz-transform: translate(0);
+					transform: translate(0);
+				}
+			</style>
+			<div class="col-md-2 col-md-offset-5" style="margin-top: 250px;">
+				<div class="cta text-center">
+					<button class="btn btn-primary btn-block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
+				</div>
+			</div>
+		
 			
 		</div>
+		
 
 	</header> 
 
@@ -89,7 +116,7 @@
 				</h3>
 				<hr class="primary">
 			</div>
-			<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="row wow">
 				<div class="col-md-12">
 					<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/1.jpg">
 						<source src="/assets/video/final1.mp4" type='video/mp4'>
@@ -104,7 +131,14 @@
 
 			</div>
 		</section>
-
+		<style type="text/css">
+			#design {
+				background-color: #fff;
+			}
+			.video-js {
+				background-color: transparent !important;
+			}
+		</style>
 
 		<section class="sections" id="design">
 			<div class="container-fluid">
@@ -115,45 +149,51 @@
 					</h3>
 					<hr class="primary">
 				</div>
-				<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+				<div class="row">
 					<div class="col-md-12">					
 
 
 						<div class="owl-carousel owl-theme">
-							<div class="card_org item">
-								<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/rotate.jpg">
-									<source src="/assets/video/rotate.mp4" type='video/mp4'>
+								<div class="item">
+									<video id="my-video-design-1" data-setup='{"autoplay": true, "loop":true, "fluid": true}' class="video-js" >
+										<source src="/assets/video/rotate.mp4" type='video/mp4'>
 
-										<p class="vjs-no-js">
-											To view this video please enable JavaScript, and consider upgrading to a web browser that
-											<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										</p>
+											<p class="vjs-no-js">
+												To view this video please enable JavaScript, and consider upgrading to a web browser that
+												<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+											</p>
 									</video>
+										<p>
+										ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.
+										</p>
 								</div>
-								<div class="card_org item" >
-									<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/open.jpg">
+								<div class="item" >
+									<video id="my-video-design-2" data-setup='{"autoplay": true,"loop":true, "fluid": true}' class="video-js" >
 										<source src="/assets/video/open.mp4" type='video/mp4'>
 
 											<p class="vjs-no-js">
 												To view this video please enable JavaScript, and consider upgrading to a web browser that
 												<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 											</p>
-										</video>
-									</div>
-
-
+									</video>
+									<p>
+										ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.
+									</p>
 								</div>
 
 
-
-							</div>				
-						</div>
+							</div>
 
 
 
+				</div>				
+			</div>
 
-					</div>
-				</section>
+
+
+
+		</div>
+	</section>
 
 
 
@@ -234,7 +274,7 @@
 							<br>
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3">
-									<button id="dwl_hit" class="btn btn-big-re btn-lg btn-block"> Apply</button></div>
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-re btn-lg btn-block"> Apply</a></div>
 								</div>
 
 							</div>
@@ -376,7 +416,7 @@
 								</div>
 								<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 									<div class="col-md-4"></div>
-									<div class="col-md-4 "><a target="_blank" id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp;Connect</a></div>
+									<div class="col-md-4 "><a target="_blank" id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp; Connect</a></div>
 
 								</div>
 							</div>
@@ -406,7 +446,7 @@
 									</div>
 									<div class="col-md-2">
 										<h3 class="footer-heading">Contact Us</h3>										
-										<a href="#" class="footer-a"> +91-8285526828</a><br>
+										<a href="#" class="footer-a"> +91-9829118530</a><br>
 
 									</div>
 									<div class="col-md-3">
@@ -452,6 +492,21 @@
 
 					</body>
 					</html>
+
+					<div class="modal fade" id="myModalvideoview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog modal-md" role="document">
+							<div class="modal-header" style="background-color:transparent !important;border:none;">
+								<a  class="close" onclick="closeit()" data-dismiss="modal" style=""><p style="color:white !important;">x</p></a>
+
+
+							</div>
+							<div class="modal-content tm"><div class="embed-responsive embed-responsive-4by3">
+								<iframe class="embed-responsive-item"  id="viewvid" src="" frameborder="0" allowfullscreen></iframe>
+							</div>							
+
+						</div>
+					</div>
+				</div>
 
 
 
@@ -528,3 +583,29 @@
 
 
 					</script>
+<script type="text/javascript">
+	function ytload(x)
+	{
+		$("#viewvid").attr("src", x+"?autoplay=1&rel=0");
+		$("#myModalvideoview").modal("show",  {backdrop: 'static'});	
+		$('body').css('padding-right','');
+		
+	}
+
+	function closeit()
+	{
+		$("#viewvid").attr("src", "");
+	}
+
+	function testAnim(x) {
+		$('.modal .modal-dialog').attr('class', 'modal-dialog  ' + x + '  animated');
+	};
+	$('#myModalvideoview').on('show.bs.modal', function (e) {
+		var anim = 'zoomIn'
+		testAnim(anim);
+	})
+	$('#myModalvideoview').on('hide.bs.modal', function (e) {
+		var anim = 'fadeOut'
+		testAnim(anim);
+	})
+</script>
