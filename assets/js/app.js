@@ -9,7 +9,7 @@
 /**
 Nprogress loading bar
 */
-var NProgress = require('NProgress');
+// var NProgress = require('NProgress');
 
 /**
  * partcles js load
@@ -29,7 +29,7 @@ if (/Mobi/.test(navigator.userAgent))
 
  var bootstrap = require('bootstrap');
 
- var videojs = require('video.js'); 
+ var videojs = require('video.js');
 
 
 // var player = videojs('my-video');
@@ -119,13 +119,13 @@ var ar = ["<i class='fa fa-quote-left'></i> Something classy about us ... <i cla
 "<i class='fa fa-quote-left'></i> Something classy about us ... <i class='fa fa-quote-right'></i>",
 "<i class='fa fa-quote-left'></i> Something classy about us ... <i class='fa fa-quote-right'></i>"];
 
-// NProgress.start();  
-// NProgress.set(0.6); 
+// NProgress.start();
+// NProgress.set(0.6);
 
 
-// $(window).on('load', function() { 
+// $(window).on('load', function() {
 // 	setTimeout(function() {
-// 		NProgress.done(); 
+// 		NProgress.done();
 // 	}, 500);
 
 
@@ -146,7 +146,7 @@ function myLoop()
 		});
 
 		if(++i >= ar.length)
-			i = 0;  
+			i = 0;
 
 	};
 	//
@@ -159,7 +159,7 @@ function myLoop()
 
 $(function() {
 
-	myLoop(); 
+	myLoop();
 	$.scrollify({
 		section:".sections",
 		interstitialSection:".sectionsFull",
@@ -173,11 +173,11 @@ $(function() {
 $("#myonoffswitch3").click(function()
 {
 	if($('#myonoffswitch3').is(":checked"))
-	{		
+	{
 		$.scrollify.enable();
 	}
 	else
-	{				
+	{
 		$.scrollify.disable();
 	}
 
@@ -195,7 +195,7 @@ $(".know").click(function(e)
 
 
 
-$(window).on('load', function() { 
+$(window).on('load', function() {
 
 	setTimeout(function() {
 
@@ -239,7 +239,7 @@ $(function() {
  */
 
 
- // $(window).scroll(function() 
+ // $(window).scroll(function()
  // {
 
  // 	var top_dist = $(window).scrollTop()/70;
@@ -250,7 +250,7 @@ $(function() {
 
  // });
 
- function getRandomInt(min, max) 
+ function getRandomInt(min, max)
  {
  	return Math.floor(Math.random() * (max - min + 1)) + min;
  }

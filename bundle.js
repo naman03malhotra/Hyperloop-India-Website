@@ -10,7 +10,7 @@
 /**
 Nprogress loading bar
 */
-var NProgress = require('NProgress');
+// var NProgress = require('NProgress');
 
 /**
  * partcles js load
@@ -30,7 +30,7 @@ if (/Mobi/.test(navigator.userAgent))
 
  var bootstrap = require('bootstrap');
 
- var videojs = require('video.js'); 
+ var videojs = require('video.js');
 
 
 // var player = videojs('my-video');
@@ -120,13 +120,13 @@ var ar = ["<i class='fa fa-quote-left'></i> Something classy about us ... <i cla
 "<i class='fa fa-quote-left'></i> Something classy about us ... <i class='fa fa-quote-right'></i>",
 "<i class='fa fa-quote-left'></i> Something classy about us ... <i class='fa fa-quote-right'></i>"];
 
-// NProgress.start();  
-// NProgress.set(0.6); 
+// NProgress.start();
+// NProgress.set(0.6);
 
 
-// $(window).on('load', function() { 
+// $(window).on('load', function() {
 // 	setTimeout(function() {
-// 		NProgress.done(); 
+// 		NProgress.done();
 // 	}, 500);
 
 
@@ -147,7 +147,7 @@ function myLoop()
 		});
 
 		if(++i >= ar.length)
-			i = 0;  
+			i = 0;
 
 	};
 	//
@@ -160,7 +160,7 @@ function myLoop()
 
 $(function() {
 
-	myLoop(); 
+	myLoop();
 	$.scrollify({
 		section:".sections",
 		interstitialSection:".sectionsFull",
@@ -174,11 +174,11 @@ $(function() {
 $("#myonoffswitch3").click(function()
 {
 	if($('#myonoffswitch3').is(":checked"))
-	{		
+	{
 		$.scrollify.enable();
 	}
 	else
-	{				
+	{
 		$.scrollify.disable();
 	}
 
@@ -196,7 +196,7 @@ $(".know").click(function(e)
 
 
 
-$(window).on('load', function() { 
+$(window).on('load', function() {
 
 	setTimeout(function() {
 
@@ -240,7 +240,7 @@ $(function() {
  */
 
 
- // $(window).scroll(function() 
+ // $(window).scroll(function()
  // {
 
  // 	var top_dist = $(window).scrollTop()/70;
@@ -251,7 +251,7 @@ $(function() {
 
  // });
 
- function getRandomInt(min, max) 
+ function getRandomInt(min, max)
  {
  	return Math.floor(Math.random() * (max - min + 1)) + min;
  }
@@ -261,485 +261,7 @@ $(function() {
 
 
 
-},{"NProgress":2,"bootstrap":3,"jquery":22,"jquery-scrollify":21,"particlesJS":24,"video.js":120}],2:[function(require,module,exports){
-/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
- * @license MIT */
-
-;(function(root, factory) {
-
-  if (typeof define === 'function' && define.amd) {
-    define(factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory();
-  } else {
-    root.NProgress = factory();
-  }
-
-})(this, function() {
-  var NProgress = {};
-
-  NProgress.version = '0.2.0';
-
-  var Settings = NProgress.settings = {
-    minimum: 0.08,
-    easing: 'ease',
-    positionUsing: '',
-    speed: 200,
-    trickle: true,
-    trickleRate: 0.02,
-    trickleSpeed: 800,
-    showSpinner: true,
-    barSelector: '[role="bar"]',
-    spinnerSelector: '[role="spinner"]',
-    parent: 'body',
-    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
-  };
-
-  /**
-   * Updates configuration.
-   *
-   *     NProgress.configure({
-   *       minimum: 0.1
-   *     });
-   */
-  NProgress.configure = function(options) {
-    var key, value;
-    for (key in options) {
-      value = options[key];
-      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
-    }
-
-    return this;
-  };
-
-  /**
-   * Last number.
-   */
-
-  NProgress.status = null;
-
-  /**
-   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
-   *
-   *     NProgress.set(0.4);
-   *     NProgress.set(1.0);
-   */
-
-  NProgress.set = function(n) {
-    var started = NProgress.isStarted();
-
-    n = clamp(n, Settings.minimum, 1);
-    NProgress.status = (n === 1 ? null : n);
-
-    var progress = NProgress.render(!started),
-        bar      = progress.querySelector(Settings.barSelector),
-        speed    = Settings.speed,
-        ease     = Settings.easing;
-
-    progress.offsetWidth; /* Repaint */
-
-    queue(function(next) {
-      // Set positionUsing if it hasn't already been set
-      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
-
-      // Add transition
-      css(bar, barPositionCSS(n, speed, ease));
-
-      if (n === 1) {
-        // Fade out
-        css(progress, { 
-          transition: 'none', 
-          opacity: 1 
-        });
-        progress.offsetWidth; /* Repaint */
-
-        setTimeout(function() {
-          css(progress, { 
-            transition: 'all ' + speed + 'ms linear', 
-            opacity: 0 
-          });
-          setTimeout(function() {
-            NProgress.remove();
-            next();
-          }, speed);
-        }, speed);
-      } else {
-        setTimeout(next, speed);
-      }
-    });
-
-    return this;
-  };
-
-  NProgress.isStarted = function() {
-    return typeof NProgress.status === 'number';
-  };
-
-  /**
-   * Shows the progress bar.
-   * This is the same as setting the status to 0%, except that it doesn't go backwards.
-   *
-   *     NProgress.start();
-   *
-   */
-  NProgress.start = function() {
-    if (!NProgress.status) NProgress.set(0);
-
-    var work = function() {
-      setTimeout(function() {
-        if (!NProgress.status) return;
-        NProgress.trickle();
-        work();
-      }, Settings.trickleSpeed);
-    };
-
-    if (Settings.trickle) work();
-
-    return this;
-  };
-
-  /**
-   * Hides the progress bar.
-   * This is the *sort of* the same as setting the status to 100%, with the
-   * difference being `done()` makes some placebo effect of some realistic motion.
-   *
-   *     NProgress.done();
-   *
-   * If `true` is passed, it will show the progress bar even if its hidden.
-   *
-   *     NProgress.done(true);
-   */
-
-  NProgress.done = function(force) {
-    if (!force && !NProgress.status) return this;
-
-    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
-  };
-
-  /**
-   * Increments by a random amount.
-   */
-
-  NProgress.inc = function(amount) {
-    var n = NProgress.status;
-
-    if (!n) {
-      return NProgress.start();
-    } else {
-      if (typeof amount !== 'number') {
-        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
-      }
-
-      n = clamp(n + amount, 0, 0.994);
-      return NProgress.set(n);
-    }
-  };
-
-  NProgress.trickle = function() {
-    return NProgress.inc(Math.random() * Settings.trickleRate);
-  };
-
-  /**
-   * Waits for all supplied jQuery promises and
-   * increases the progress as the promises resolve.
-   *
-   * @param $promise jQUery Promise
-   */
-  (function() {
-    var initial = 0, current = 0;
-
-    NProgress.promise = function($promise) {
-      if (!$promise || $promise.state() === "resolved") {
-        return this;
-      }
-
-      if (current === 0) {
-        NProgress.start();
-      }
-
-      initial++;
-      current++;
-
-      $promise.always(function() {
-        current--;
-        if (current === 0) {
-            initial = 0;
-            NProgress.done();
-        } else {
-            NProgress.set((initial - current) / initial);
-        }
-      });
-
-      return this;
-    };
-
-  })();
-
-  /**
-   * (Internal) renders the progress bar markup based on the `template`
-   * setting.
-   */
-
-  NProgress.render = function(fromStart) {
-    if (NProgress.isRendered()) return document.getElementById('nprogress');
-
-    addClass(document.documentElement, 'nprogress-busy');
-    
-    var progress = document.createElement('div');
-    progress.id = 'nprogress';
-    progress.innerHTML = Settings.template;
-
-    var bar      = progress.querySelector(Settings.barSelector),
-        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
-        parent   = document.querySelector(Settings.parent),
-        spinner;
-    
-    css(bar, {
-      transition: 'all 0 linear',
-      transform: 'translate3d(' + perc + '%,0,0)'
-    });
-
-    if (!Settings.showSpinner) {
-      spinner = progress.querySelector(Settings.spinnerSelector);
-      spinner && removeElement(spinner);
-    }
-
-    if (parent != document.body) {
-      addClass(parent, 'nprogress-custom-parent');
-    }
-
-    parent.appendChild(progress);
-    return progress;
-  };
-
-  /**
-   * Removes the element. Opposite of render().
-   */
-
-  NProgress.remove = function() {
-    removeClass(document.documentElement, 'nprogress-busy');
-    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
-    var progress = document.getElementById('nprogress');
-    progress && removeElement(progress);
-  };
-
-  /**
-   * Checks if the progress bar is rendered.
-   */
-
-  NProgress.isRendered = function() {
-    return !!document.getElementById('nprogress');
-  };
-
-  /**
-   * Determine which positioning CSS rule to use.
-   */
-
-  NProgress.getPositioningCSS = function() {
-    // Sniff on document.body.style
-    var bodyStyle = document.body.style;
-
-    // Sniff prefixes
-    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
-                       ('MozTransform' in bodyStyle) ? 'Moz' :
-                       ('msTransform' in bodyStyle) ? 'ms' :
-                       ('OTransform' in bodyStyle) ? 'O' : '';
-
-    if (vendorPrefix + 'Perspective' in bodyStyle) {
-      // Modern browsers with 3D support, e.g. Webkit, IE10
-      return 'translate3d';
-    } else if (vendorPrefix + 'Transform' in bodyStyle) {
-      // Browsers without 3D support, e.g. IE9
-      return 'translate';
-    } else {
-      // Browsers without translate() support, e.g. IE7-8
-      return 'margin';
-    }
-  };
-
-  /**
-   * Helpers
-   */
-
-  function clamp(n, min, max) {
-    if (n < min) return min;
-    if (n > max) return max;
-    return n;
-  }
-
-  /**
-   * (Internal) converts a percentage (`0..1`) to a bar translateX
-   * percentage (`-100%..0%`).
-   */
-
-  function toBarPerc(n) {
-    return (-1 + n) * 100;
-  }
-
-
-  /**
-   * (Internal) returns the correct CSS for changing the bar's
-   * position given an n percentage, and speed and ease from Settings
-   */
-
-  function barPositionCSS(n, speed, ease) {
-    var barCSS;
-
-    if (Settings.positionUsing === 'translate3d') {
-      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
-    } else if (Settings.positionUsing === 'translate') {
-      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
-    } else {
-      barCSS = { 'margin-left': toBarPerc(n)+'%' };
-    }
-
-    barCSS.transition = 'all '+speed+'ms '+ease;
-
-    return barCSS;
-  }
-
-  /**
-   * (Internal) Queues a function to be executed.
-   */
-
-  var queue = (function() {
-    var pending = [];
-    
-    function next() {
-      var fn = pending.shift();
-      if (fn) {
-        fn(next);
-      }
-    }
-
-    return function(fn) {
-      pending.push(fn);
-      if (pending.length == 1) next();
-    };
-  })();
-
-  /**
-   * (Internal) Applies css properties to an element, similar to the jQuery 
-   * css method.
-   *
-   * While this helper does assist with vendor prefixed property names, it 
-   * does not perform any manipulation of values prior to setting styles.
-   */
-
-  var css = (function() {
-    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
-        cssProps    = {};
-
-    function camelCase(string) {
-      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
-        return letter.toUpperCase();
-      });
-    }
-
-    function getVendorProp(name) {
-      var style = document.body.style;
-      if (name in style) return name;
-
-      var i = cssPrefixes.length,
-          capName = name.charAt(0).toUpperCase() + name.slice(1),
-          vendorName;
-      while (i--) {
-        vendorName = cssPrefixes[i] + capName;
-        if (vendorName in style) return vendorName;
-      }
-
-      return name;
-    }
-
-    function getStyleProp(name) {
-      name = camelCase(name);
-      return cssProps[name] || (cssProps[name] = getVendorProp(name));
-    }
-
-    function applyCss(element, prop, value) {
-      prop = getStyleProp(prop);
-      element.style[prop] = value;
-    }
-
-    return function(element, properties) {
-      var args = arguments,
-          prop, 
-          value;
-
-      if (args.length == 2) {
-        for (prop in properties) {
-          value = properties[prop];
-          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
-        }
-      } else {
-        applyCss(element, args[1], args[2]);
-      }
-    }
-  })();
-
-  /**
-   * (Internal) Determines if an element or space separated list of class names contains a class name.
-   */
-
-  function hasClass(element, name) {
-    var list = typeof element == 'string' ? element : classList(element);
-    return list.indexOf(' ' + name + ' ') >= 0;
-  }
-
-  /**
-   * (Internal) Adds a class to an element.
-   */
-
-  function addClass(element, name) {
-    var oldList = classList(element),
-        newList = oldList + name;
-
-    if (hasClass(oldList, name)) return; 
-
-    // Trim the opening space.
-    element.className = newList.substring(1);
-  }
-
-  /**
-   * (Internal) Removes a class from an element.
-   */
-
-  function removeClass(element, name) {
-    var oldList = classList(element),
-        newList;
-
-    if (!hasClass(element, name)) return;
-
-    // Replace the class name.
-    newList = oldList.replace(' ' + name + ' ', ' ');
-
-    // Trim the opening and closing spaces.
-    element.className = newList.substring(1, newList.length - 1);
-  }
-
-  /**
-   * (Internal) Gets a space separated list of the class names on the element. 
-   * The list is wrapped with a single space on each end to facilitate finding 
-   * matches within the list.
-   */
-
-  function classList(element) {
-    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
-  }
-
-  /**
-   * (Internal) Removes an element from the DOM.
-   */
-
-  function removeElement(element) {
-    element && element.parentNode && element.parentNode.removeChild(element);
-  }
-
-  return NProgress;
-});
-
-
-},{}],3:[function(require,module,exports){
+},{"bootstrap":2,"jquery":21,"jquery-scrollify":20,"particlesJS":23,"video.js":119}],2:[function(require,module,exports){
 // This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
 require('../../js/transition.js')
 require('../../js/alert.js')
@@ -753,7 +275,7 @@ require('../../js/popover.js')
 require('../../js/scrollspy.js')
 require('../../js/tab.js')
 require('../../js/affix.js')
-},{"../../js/affix.js":4,"../../js/alert.js":5,"../../js/button.js":6,"../../js/carousel.js":7,"../../js/collapse.js":8,"../../js/dropdown.js":9,"../../js/modal.js":10,"../../js/popover.js":11,"../../js/scrollspy.js":12,"../../js/tab.js":13,"../../js/tooltip.js":14,"../../js/transition.js":15}],4:[function(require,module,exports){
+},{"../../js/affix.js":3,"../../js/alert.js":4,"../../js/button.js":5,"../../js/carousel.js":6,"../../js/collapse.js":7,"../../js/dropdown.js":8,"../../js/modal.js":9,"../../js/popover.js":10,"../../js/scrollspy.js":11,"../../js/tab.js":12,"../../js/tooltip.js":13,"../../js/transition.js":14}],3:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: affix.js v3.3.7
  * http://getbootstrap.com/javascript/#affix
@@ -917,7 +439,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: alert.js v3.3.7
  * http://getbootstrap.com/javascript/#alerts
@@ -1013,7 +535,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],6:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: button.js v3.3.7
  * http://getbootstrap.com/javascript/#buttons
@@ -1140,7 +662,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],7:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: carousel.js v3.3.7
  * http://getbootstrap.com/javascript/#carousel
@@ -1379,7 +901,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],8:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
@@ -1593,7 +1115,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: dropdown.js v3.3.7
  * http://getbootstrap.com/javascript/#dropdowns
@@ -1760,7 +1282,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
@@ -2101,7 +1623,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: popover.js v3.3.7
  * http://getbootstrap.com/javascript/#popovers
@@ -2211,7 +1733,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: scrollspy.js v3.3.7
  * http://getbootstrap.com/javascript/#scrollspy
@@ -2385,7 +1907,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],13:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
@@ -2542,7 +2064,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.7
  * http://getbootstrap.com/javascript/#tooltip
@@ -3064,7 +2586,7 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],15:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
@@ -3125,9 +2647,9 @@ require('../../js/affix.js')
 
 }(jQuery);
 
-},{}],16:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 
-},{}],17:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var isFunction = require('is-function')
 
 module.exports = forEach
@@ -3175,7 +2697,7 @@ function forEachObject(object, iterator, context) {
     }
 }
 
-},{"is-function":20}],18:[function(require,module,exports){
+},{"is-function":19}],17:[function(require,module,exports){
 (function (global){
 var topLevel = typeof global !== 'undefined' ? global :
     typeof window !== 'undefined' ? window : {}
@@ -3194,7 +2716,7 @@ if (typeof document !== 'undefined') {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"min-document":16}],19:[function(require,module,exports){
+},{"min-document":15}],18:[function(require,module,exports){
 (function (global){
 if (typeof window !== "undefined") {
     module.exports = window;
@@ -3207,7 +2729,7 @@ if (typeof window !== "undefined") {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],20:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 module.exports = isFunction
 
 var toString = Object.prototype.toString
@@ -3224,7 +2746,7 @@ function isFunction (fn) {
       fn === window.prompt))
 };
 
-},{}],21:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /*!
  * jQuery Scrollify
  * Version 1.0.14
@@ -4058,7 +3580,7 @@ if touchScroll is false - update index
 	return scrollify;
 }));
 
-},{"jquery":22}],22:[function(require,module,exports){
+},{"jquery":21}],21:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
@@ -14313,7 +13835,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],23:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 var trim = require('trim')
   , forEach = require('for-each')
   , isArray = function(arg) {
@@ -14345,7 +13867,7 @@ module.exports = function (headers) {
 
   return result
 }
-},{"for-each":17,"trim":26}],24:[function(require,module,exports){
+},{"for-each":16,"trim":25}],23:[function(require,module,exports){
 /* -----------------------------------------------
 /* Author : Vincent Garreau  - vincentgarreau.com
 /* MIT license: http://opensource.org/licenses/MIT
@@ -15892,7 +15414,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
 
 
 module.exports = particlesJS;
-},{}],25:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 module.exports = SafeParseTuple
 
 function SafeParseTuple(obj, reviver) {
@@ -15908,7 +15430,7 @@ function SafeParseTuple(obj, reviver) {
     return [error, json]
 }
 
-},{}],26:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 
 exports = module.exports = trim;
 
@@ -15924,7 +15446,7 @@ exports.right = function(str){
   return str.replace(/\s*$/, '');
 };
 
-},{}],27:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 function clean (s) {
   return s.replace(/\n\r?\s*/g, '')
 }
@@ -15939,7 +15461,7 @@ module.exports = function tsml (sa) {
 
   return s
 }
-},{}],28:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -16033,7 +15555,7 @@ BigPlayButton.prototype.controlText_ = 'Play Video';
 _component2['default'].registerComponent('BigPlayButton', BigPlayButton);
 exports['default'] = BigPlayButton;
 
-},{"./button.js":29,"./component.js":32}],29:[function(require,module,exports){
+},{"./button.js":28,"./component.js":31}],28:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -16211,7 +15733,7 @@ var Button = function (_ClickableComponent) {
 _component2['default'].registerComponent('Button', Button);
 exports['default'] = Button;
 
-},{"./clickable-component.js":30,"./component":32,"./utils/log.js":113,"./utils/obj":115}],30:[function(require,module,exports){
+},{"./clickable-component.js":29,"./component":31,"./utils/log.js":112,"./utils/obj":114}],29:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -16533,7 +16055,7 @@ var ClickableComponent = function (_Component) {
 _component2['default'].registerComponent('ClickableComponent', ClickableComponent);
 exports['default'] = ClickableComponent;
 
-},{"./component":32,"./utils/dom.js":108,"./utils/events.js":109,"./utils/fn.js":110,"./utils/log.js":113,"./utils/obj":115,"global/document":18}],31:[function(require,module,exports){
+},{"./component":31,"./utils/dom.js":107,"./utils/events.js":108,"./utils/fn.js":109,"./utils/log.js":112,"./utils/obj":114,"global/document":17}],30:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -16632,7 +16154,7 @@ var CloseButton = function (_Button) {
 _component2['default'].registerComponent('CloseButton', CloseButton);
 exports['default'] = CloseButton;
 
-},{"./button":29,"./component":32}],32:[function(require,module,exports){
+},{"./button":28,"./component":31}],31:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -18460,7 +17982,7 @@ var Component = function () {
 Component.registerComponent('Component', Component);
 exports['default'] = Component;
 
-},{"./utils/dom.js":108,"./utils/events.js":109,"./utils/fn.js":110,"./utils/guid.js":112,"./utils/log.js":113,"./utils/merge-options.js":114,"./utils/to-title-case.js":118,"global/window":19}],33:[function(require,module,exports){
+},{"./utils/dom.js":107,"./utils/events.js":108,"./utils/fn.js":109,"./utils/guid.js":111,"./utils/log.js":112,"./utils/merge-options.js":113,"./utils/to-title-case.js":117,"global/window":18}],32:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -18581,7 +18103,7 @@ AudioTrackButton.prototype.controlText_ = 'Audio Track';
 _component2['default'].registerComponent('AudioTrackButton', AudioTrackButton);
 exports['default'] = AudioTrackButton;
 
-},{"../../component.js":32,"../track-button.js":63,"./audio-track-menu-item.js":34}],34:[function(require,module,exports){
+},{"../../component.js":31,"../track-button.js":62,"./audio-track-menu-item.js":33}],33:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -18702,7 +18224,7 @@ var AudioTrackMenuItem = function (_MenuItem) {
 _component2['default'].registerComponent('AudioTrackMenuItem', AudioTrackMenuItem);
 exports['default'] = AudioTrackMenuItem;
 
-},{"../../component.js":32,"../../menu/menu-item.js":75,"../../utils/fn.js":110}],35:[function(require,module,exports){
+},{"../../component.js":31,"../../menu/menu-item.js":74,"../../utils/fn.js":109}],34:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -18809,7 +18331,7 @@ ControlBar.prototype.options_ = {
 _component2['default'].registerComponent('ControlBar', ControlBar);
 exports['default'] = ControlBar;
 
-},{"../component.js":32,"./audio-track-controls/audio-track-button.js":33,"./fullscreen-toggle.js":36,"./live-display.js":37,"./mute-toggle.js":38,"./play-toggle.js":39,"./playback-rate-menu/playback-rate-menu-button.js":40,"./progress-control/progress-control.js":45,"./spacer-controls/custom-control-spacer.js":48,"./text-track-controls/captions-button.js":51,"./text-track-controls/chapters-button.js":52,"./text-track-controls/descriptions-button.js":54,"./text-track-controls/subtitles-button.js":56,"./time-controls/current-time-display.js":59,"./time-controls/duration-display.js":60,"./time-controls/remaining-time-display.js":61,"./time-controls/time-divider.js":62,"./volume-control/volume-control.js":65,"./volume-menu-button.js":67}],36:[function(require,module,exports){
+},{"../component.js":31,"./audio-track-controls/audio-track-button.js":32,"./fullscreen-toggle.js":35,"./live-display.js":36,"./mute-toggle.js":37,"./play-toggle.js":38,"./playback-rate-menu/playback-rate-menu-button.js":39,"./progress-control/progress-control.js":44,"./spacer-controls/custom-control-spacer.js":47,"./text-track-controls/captions-button.js":50,"./text-track-controls/chapters-button.js":51,"./text-track-controls/descriptions-button.js":53,"./text-track-controls/subtitles-button.js":55,"./time-controls/current-time-display.js":58,"./time-controls/duration-display.js":59,"./time-controls/remaining-time-display.js":60,"./time-controls/time-divider.js":61,"./volume-control/volume-control.js":64,"./volume-menu-button.js":66}],35:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -18927,7 +18449,7 @@ FullscreenToggle.prototype.controlText_ = 'Fullscreen';
 _component2['default'].registerComponent('FullscreenToggle', FullscreenToggle);
 exports['default'] = FullscreenToggle;
 
-},{"../button.js":29,"../component.js":32}],37:[function(require,module,exports){
+},{"../button.js":28,"../component.js":31}],36:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19031,7 +18553,7 @@ var LiveDisplay = function (_Component) {
 _component2['default'].registerComponent('LiveDisplay', LiveDisplay);
 exports['default'] = LiveDisplay;
 
-},{"../component":32,"../utils/dom.js":108}],38:[function(require,module,exports){
+},{"../component":31,"../utils/dom.js":107}],37:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19187,7 +18709,7 @@ MuteToggle.prototype.controlText_ = 'Mute';
 _component2['default'].registerComponent('MuteToggle', MuteToggle);
 exports['default'] = MuteToggle;
 
-},{"../button":29,"../component":32,"../utils/dom.js":108}],39:[function(require,module,exports){
+},{"../button":28,"../component":31,"../utils/dom.js":107}],38:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19321,7 +18843,7 @@ PlayToggle.prototype.controlText_ = 'Play';
 _component2['default'].registerComponent('PlayToggle', PlayToggle);
 exports['default'] = PlayToggle;
 
-},{"../button.js":29,"../component.js":32}],40:[function(require,module,exports){
+},{"../button.js":28,"../component.js":31}],39:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19558,7 +19080,7 @@ PlaybackRateMenuButton.prototype.controlText_ = 'Playback Rate';
 _component2['default'].registerComponent('PlaybackRateMenuButton', PlaybackRateMenuButton);
 exports['default'] = PlaybackRateMenuButton;
 
-},{"../../component.js":32,"../../menu/menu-button.js":74,"../../menu/menu.js":76,"../../utils/dom.js":108,"./playback-rate-menu-item.js":41}],41:[function(require,module,exports){
+},{"../../component.js":31,"../../menu/menu-button.js":73,"../../menu/menu.js":75,"../../utils/dom.js":107,"./playback-rate-menu-item.js":40}],40:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19667,7 +19189,7 @@ PlaybackRateMenuItem.prototype.contentElType = 'button';
 _component2['default'].registerComponent('PlaybackRateMenuItem', PlaybackRateMenuItem);
 exports['default'] = PlaybackRateMenuItem;
 
-},{"../../component.js":32,"../../menu/menu-item.js":75}],42:[function(require,module,exports){
+},{"../../component.js":31,"../../menu/menu-item.js":74}],41:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19791,7 +19313,7 @@ var LoadProgressBar = function (_Component) {
 _component2['default'].registerComponent('LoadProgressBar', LoadProgressBar);
 exports['default'] = LoadProgressBar;
 
-},{"../../component.js":32,"../../utils/dom.js":108}],43:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/dom.js":107}],42:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -19987,7 +19509,7 @@ var MouseTimeDisplay = function (_Component) {
 _component2['default'].registerComponent('MouseTimeDisplay', MouseTimeDisplay);
 exports['default'] = MouseTimeDisplay;
 
-},{"../../component.js":32,"../../utils/computed-style.js":107,"../../utils/dom.js":108,"../../utils/fn.js":110,"../../utils/format-time.js":111}],44:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/computed-style.js":106,"../../utils/dom.js":107,"../../utils/fn.js":109,"../../utils/format-time.js":110}],43:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20090,7 +19612,7 @@ var PlayProgressBar = function (_Component) {
 _component2['default'].registerComponent('PlayProgressBar', PlayProgressBar);
 exports['default'] = PlayProgressBar;
 
-},{"../../component.js":32,"../../utils/fn.js":110,"../../utils/format-time.js":111}],45:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/fn.js":109,"../../utils/format-time.js":110}],44:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20159,7 +19681,7 @@ ProgressControl.prototype.options_ = {
 _component2['default'].registerComponent('ProgressControl', ProgressControl);
 exports['default'] = ProgressControl;
 
-},{"../../component.js":32,"./mouse-time-display.js":43,"./seek-bar.js":46}],46:[function(require,module,exports){
+},{"../../component.js":31,"./mouse-time-display.js":42,"./seek-bar.js":45}],45:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20421,7 +19943,7 @@ SeekBar.prototype.playerEvent = 'timeupdate';
 _component2['default'].registerComponent('SeekBar', SeekBar);
 exports['default'] = SeekBar;
 
-},{"../../component.js":32,"../../slider/slider.js":84,"../../utils/computed-style.js":107,"../../utils/fn.js":110,"../../utils/format-time.js":111,"./load-progress-bar.js":42,"./play-progress-bar.js":44,"./tooltip-progress-bar.js":47}],47:[function(require,module,exports){
+},{"../../component.js":31,"../../slider/slider.js":83,"../../utils/computed-style.js":106,"../../utils/fn.js":109,"../../utils/format-time.js":110,"./load-progress-bar.js":41,"./play-progress-bar.js":43,"./tooltip-progress-bar.js":46}],46:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20522,7 +20044,7 @@ var TooltipProgressBar = function (_Component) {
 _component2['default'].registerComponent('TooltipProgressBar', TooltipProgressBar);
 exports['default'] = TooltipProgressBar;
 
-},{"../../component.js":32,"../../utils/fn.js":110,"../../utils/format-time.js":111}],48:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/fn.js":109,"../../utils/format-time.js":110}],47:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20595,7 +20117,7 @@ var CustomControlSpacer = function (_Spacer) {
 _component2['default'].registerComponent('CustomControlSpacer', CustomControlSpacer);
 exports['default'] = CustomControlSpacer;
 
-},{"../../component.js":32,"./spacer.js":49}],49:[function(require,module,exports){
+},{"../../component.js":31,"./spacer.js":48}],48:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20661,7 +20183,7 @@ _component2['default'].registerComponent('Spacer', Spacer);
 
 exports['default'] = Spacer;
 
-},{"../../component.js":32}],50:[function(require,module,exports){
+},{"../../component.js":31}],49:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20748,7 +20270,7 @@ var CaptionSettingsMenuItem = function (_TextTrackMenuItem) {
 _component2['default'].registerComponent('CaptionSettingsMenuItem', CaptionSettingsMenuItem);
 exports['default'] = CaptionSettingsMenuItem;
 
-},{"../../component.js":32,"./text-track-menu-item.js":58}],51:[function(require,module,exports){
+},{"../../component.js":31,"./text-track-menu-item.js":57}],50:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -20861,7 +20383,7 @@ CaptionsButton.prototype.controlText_ = 'Captions';
 _component2['default'].registerComponent('CaptionsButton', CaptionsButton);
 exports['default'] = CaptionsButton;
 
-},{"../../component.js":32,"./caption-settings-menu-item.js":50,"./text-track-button.js":57}],52:[function(require,module,exports){
+},{"../../component.js":31,"./caption-settings-menu-item.js":49,"./text-track-button.js":56}],51:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21103,7 +20625,7 @@ ChaptersButton.prototype.controlText_ = 'Chapters';
 _component2['default'].registerComponent('ChaptersButton', ChaptersButton);
 exports['default'] = ChaptersButton;
 
-},{"../../component.js":32,"../../utils/to-title-case.js":118,"./chapters-track-menu-item.js":53,"./text-track-button.js":57}],53:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/to-title-case.js":117,"./chapters-track-menu-item.js":52,"./text-track-button.js":56}],52:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21213,7 +20735,7 @@ var ChaptersTrackMenuItem = function (_MenuItem) {
 _component2['default'].registerComponent('ChaptersTrackMenuItem', ChaptersTrackMenuItem);
 exports['default'] = ChaptersTrackMenuItem;
 
-},{"../../component.js":32,"../../menu/menu-item.js":75,"../../utils/fn.js":110}],54:[function(require,module,exports){
+},{"../../component.js":31,"../../menu/menu-item.js":74,"../../utils/fn.js":109}],53:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21351,7 +20873,7 @@ DescriptionsButton.prototype.controlText_ = 'Descriptions';
 _component2['default'].registerComponent('DescriptionsButton', DescriptionsButton);
 exports['default'] = DescriptionsButton;
 
-},{"../../component.js":32,"../../utils/fn.js":110,"./text-track-button.js":57}],55:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/fn.js":109,"./text-track-button.js":56}],54:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21444,7 +20966,7 @@ var OffTextTrackMenuItem = function (_TextTrackMenuItem) {
 _component2['default'].registerComponent('OffTextTrackMenuItem', OffTextTrackMenuItem);
 exports['default'] = OffTextTrackMenuItem;
 
-},{"../../component.js":32,"./text-track-menu-item.js":58}],56:[function(require,module,exports){
+},{"../../component.js":31,"./text-track-menu-item.js":57}],55:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21533,7 +21055,7 @@ SubtitlesButton.prototype.controlText_ = 'Subtitles';
 _component2['default'].registerComponent('SubtitlesButton', SubtitlesButton);
 exports['default'] = SubtitlesButton;
 
-},{"../../component.js":32,"./text-track-button.js":57}],57:[function(require,module,exports){
+},{"../../component.js":31,"./text-track-button.js":56}],56:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21638,7 +21160,7 @@ var TextTrackButton = function (_TrackButton) {
 _component2['default'].registerComponent('TextTrackButton', TextTrackButton);
 exports['default'] = TextTrackButton;
 
-},{"../../component.js":32,"../track-button.js":63,"./off-text-track-menu-item.js":55,"./text-track-menu-item.js":58}],58:[function(require,module,exports){
+},{"../../component.js":31,"../track-button.js":62,"./off-text-track-menu-item.js":54,"./text-track-menu-item.js":57}],57:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21807,7 +21329,7 @@ var TextTrackMenuItem = function (_MenuItem) {
 _component2['default'].registerComponent('TextTrackMenuItem', TextTrackMenuItem);
 exports['default'] = TextTrackMenuItem;
 
-},{"../../component.js":32,"../../menu/menu-item.js":75,"../../utils/fn.js":110,"global/document":18,"global/window":19}],59:[function(require,module,exports){
+},{"../../component.js":31,"../../menu/menu-item.js":74,"../../utils/fn.js":109,"global/document":17,"global/window":18}],58:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21917,7 +21439,7 @@ var CurrentTimeDisplay = function (_Component) {
 _component2['default'].registerComponent('CurrentTimeDisplay', CurrentTimeDisplay);
 exports['default'] = CurrentTimeDisplay;
 
-},{"../../component.js":32,"../../utils/dom.js":108,"../../utils/format-time.js":111}],60:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/dom.js":107,"../../utils/format-time.js":110}],59:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22037,7 +21559,7 @@ var DurationDisplay = function (_Component) {
 _component2['default'].registerComponent('DurationDisplay', DurationDisplay);
 exports['default'] = DurationDisplay;
 
-},{"../../component.js":32,"../../utils/dom.js":108,"../../utils/format-time.js":111}],61:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/dom.js":107,"../../utils/format-time.js":110}],60:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22153,7 +21675,7 @@ var RemainingTimeDisplay = function (_Component) {
 _component2['default'].registerComponent('RemainingTimeDisplay', RemainingTimeDisplay);
 exports['default'] = RemainingTimeDisplay;
 
-},{"../../component.js":32,"../../utils/dom.js":108,"../../utils/format-time.js":111}],62:[function(require,module,exports){
+},{"../../component.js":31,"../../utils/dom.js":107,"../../utils/format-time.js":110}],61:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22207,7 +21729,7 @@ var TimeDivider = function (_Component) {
 _component2['default'].registerComponent('TimeDivider', TimeDivider);
 exports['default'] = TimeDivider;
 
-},{"../../component.js":32}],63:[function(require,module,exports){
+},{"../../component.js":31}],62:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22287,7 +21809,7 @@ var TrackButton = function (_MenuButton) {
 _component2['default'].registerComponent('TrackButton', TrackButton);
 exports['default'] = TrackButton;
 
-},{"../component.js":32,"../menu/menu-button.js":74,"../utils/fn.js":110}],64:[function(require,module,exports){
+},{"../component.js":31,"../menu/menu-button.js":73,"../utils/fn.js":109}],63:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22470,7 +21992,7 @@ VolumeBar.prototype.playerEvent = 'volumechange';
 _component2['default'].registerComponent('VolumeBar', VolumeBar);
 exports['default'] = VolumeBar;
 
-},{"../../component.js":32,"../../slider/slider.js":84,"../../utils/fn.js":110,"./volume-level.js":66}],65:[function(require,module,exports){
+},{"../../component.js":31,"../../slider/slider.js":83,"../../utils/fn.js":109,"./volume-level.js":65}],64:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22563,7 +22085,7 @@ VolumeControl.prototype.options_ = {
 _component2['default'].registerComponent('VolumeControl', VolumeControl);
 exports['default'] = VolumeControl;
 
-},{"../../component.js":32,"./volume-bar.js":64}],66:[function(require,module,exports){
+},{"../../component.js":31,"./volume-bar.js":63}],65:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22616,7 +22138,7 @@ var VolumeLevel = function (_Component) {
 _component2['default'].registerComponent('VolumeLevel', VolumeLevel);
 exports['default'] = VolumeLevel;
 
-},{"../../component.js":32}],67:[function(require,module,exports){
+},{"../../component.js":31}],66:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22861,7 +22383,7 @@ VolumeMenuButton.prototype.controlText_ = 'Mute';
 _component2['default'].registerComponent('VolumeMenuButton', VolumeMenuButton);
 exports['default'] = VolumeMenuButton;
 
-},{"../component.js":32,"../popup/popup-button.js":80,"../popup/popup.js":81,"../utils/fn.js":110,"./mute-toggle.js":38,"./volume-control/volume-bar.js":64}],68:[function(require,module,exports){
+},{"../component.js":31,"../popup/popup-button.js":79,"../popup/popup.js":80,"../utils/fn.js":109,"./mute-toggle.js":37,"./volume-control/volume-bar.js":63}],67:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22964,7 +22486,7 @@ ErrorDisplay.prototype.options_ = (0, _mergeOptions2['default'])(_modalDialog2['
 _component2['default'].registerComponent('ErrorDisplay', ErrorDisplay);
 exports['default'] = ErrorDisplay;
 
-},{"./component":32,"./modal-dialog":77,"./utils/merge-options":114}],69:[function(require,module,exports){
+},{"./component":31,"./modal-dialog":76,"./utils/merge-options":113}],68:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23135,7 +22657,7 @@ EventTarget.prototype.dispatchEvent = EventTarget.prototype.trigger;
 
 exports['default'] = EventTarget;
 
-},{"./utils/events.js":109}],70:[function(require,module,exports){
+},{"./utils/events.js":108}],69:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23237,7 +22759,7 @@ var extendFn = function extendFn(superClass) {
 
 exports['default'] = extendFn;
 
-},{"./utils/log":113,"./utils/obj":115}],71:[function(require,module,exports){
+},{"./utils/log":112,"./utils/obj":114}],70:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23294,7 +22816,7 @@ if (browserApi) {
 
 exports['default'] = FullscreenApi;
 
-},{"global/document":18}],72:[function(require,module,exports){
+},{"global/document":17}],71:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23347,7 +22869,7 @@ var LoadingSpinner = function (_Component) {
 _component2['default'].registerComponent('LoadingSpinner', LoadingSpinner);
 exports['default'] = LoadingSpinner;
 
-},{"./component":32}],73:[function(require,module,exports){
+},{"./component":31}],72:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23560,7 +23082,7 @@ for (var errNum = 0; errNum < MediaError.errorTypes.length; errNum++) {
 
 exports['default'] = MediaError;
 
-},{"./utils/obj":115}],74:[function(require,module,exports){
+},{"./utils/obj":114}],73:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23914,7 +23436,7 @@ var MenuButton = function (_ClickableComponent) {
 _component2['default'].registerComponent('MenuButton', MenuButton);
 exports['default'] = MenuButton;
 
-},{"../clickable-component.js":30,"../component.js":32,"../utils/dom.js":108,"../utils/fn.js":110,"../utils/to-title-case.js":118,"./menu.js":76}],75:[function(require,module,exports){
+},{"../clickable-component.js":29,"../component.js":31,"../utils/dom.js":107,"../utils/fn.js":109,"../utils/to-title-case.js":117,"./menu.js":75}],74:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -24054,7 +23576,7 @@ var MenuItem = function (_ClickableComponent) {
 _component2['default'].registerComponent('MenuItem', MenuItem);
 exports['default'] = MenuItem;
 
-},{"../clickable-component.js":30,"../component.js":32,"../utils/obj":115}],76:[function(require,module,exports){
+},{"../clickable-component.js":29,"../component.js":31,"../utils/obj":114}],75:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -24258,7 +23780,7 @@ var Menu = function (_Component) {
 _component2['default'].registerComponent('Menu', Menu);
 exports['default'] = Menu;
 
-},{"../component.js":32,"../utils/dom.js":108,"../utils/events.js":109,"../utils/fn.js":110}],77:[function(require,module,exports){
+},{"../component.js":31,"../utils/dom.js":107,"../utils/events.js":108,"../utils/fn.js":109}],76:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -24753,7 +24275,7 @@ ModalDialog.prototype.options_ = {
 _component2['default'].registerComponent('ModalDialog', ModalDialog);
 exports['default'] = ModalDialog;
 
-},{"./component":32,"./utils/dom":108,"./utils/fn":110}],78:[function(require,module,exports){
+},{"./component":31,"./utils/dom":107,"./utils/fn":109}],77:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -28390,7 +27912,7 @@ TECH_EVENTS_RETRIGGER.forEach(function (event) {
 _component2['default'].registerComponent('Player', Player);
 exports['default'] = Player;
 
-},{"./big-play-button.js":28,"./close-button.js":31,"./component.js":32,"./control-bar/control-bar.js":35,"./error-display.js":68,"./fullscreen-api.js":71,"./loading-spinner.js":72,"./media-error.js":73,"./modal-dialog":77,"./poster-image.js":82,"./tech/flash.js":86,"./tech/html5.js":87,"./tech/loader.js":88,"./tech/tech.js":89,"./tracks/audio-track-list.js":90,"./tracks/text-track-display.js":95,"./tracks/text-track-list-converter.js":96,"./tracks/text-track-settings.js":98,"./tracks/video-track-list.js":103,"./utils/browser.js":105,"./utils/buffer.js":106,"./utils/dom.js":108,"./utils/events.js":109,"./utils/fn.js":110,"./utils/guid.js":112,"./utils/log.js":113,"./utils/merge-options.js":114,"./utils/obj":115,"./utils/stylesheet.js":116,"./utils/time-ranges.js":117,"./utils/to-title-case.js":118,"global/document":18,"global/window":19,"safe-json-parse/tuple":25}],79:[function(require,module,exports){
+},{"./big-play-button.js":27,"./close-button.js":30,"./component.js":31,"./control-bar/control-bar.js":34,"./error-display.js":67,"./fullscreen-api.js":70,"./loading-spinner.js":71,"./media-error.js":72,"./modal-dialog":76,"./poster-image.js":81,"./tech/flash.js":85,"./tech/html5.js":86,"./tech/loader.js":87,"./tech/tech.js":88,"./tracks/audio-track-list.js":89,"./tracks/text-track-display.js":94,"./tracks/text-track-list-converter.js":95,"./tracks/text-track-settings.js":97,"./tracks/video-track-list.js":102,"./utils/browser.js":104,"./utils/buffer.js":105,"./utils/dom.js":107,"./utils/events.js":108,"./utils/fn.js":109,"./utils/guid.js":111,"./utils/log.js":112,"./utils/merge-options.js":113,"./utils/obj":114,"./utils/stylesheet.js":115,"./utils/time-ranges.js":116,"./utils/to-title-case.js":117,"global/document":17,"global/window":18,"safe-json-parse/tuple":24}],78:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -28418,7 +27940,7 @@ var plugin = function plugin(name, init) {
     */
 exports['default'] = plugin;
 
-},{"./player.js":78}],80:[function(require,module,exports){
+},{"./player.js":77}],79:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -28542,7 +28064,7 @@ var PopupButton = function (_ClickableComponent) {
 _component2['default'].registerComponent('PopupButton', PopupButton);
 exports['default'] = PopupButton;
 
-},{"../clickable-component.js":30,"../component.js":32}],81:[function(require,module,exports){
+},{"../clickable-component.js":29,"../component.js":31}],80:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -28642,7 +28164,7 @@ var Popup = function (_Component) {
 _component2['default'].registerComponent('Popup', Popup);
 exports['default'] = Popup;
 
-},{"../component.js":32,"../utils/dom.js":108,"../utils/events.js":109,"../utils/fn.js":110}],82:[function(require,module,exports){
+},{"../component.js":31,"../utils/dom.js":107,"../utils/events.js":108,"../utils/fn.js":109}],81:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -28825,7 +28347,7 @@ var PosterImage = function (_ClickableComponent) {
 _component2['default'].registerComponent('PosterImage', PosterImage);
 exports['default'] = PosterImage;
 
-},{"./clickable-component.js":30,"./component.js":32,"./utils/browser.js":105,"./utils/dom.js":108,"./utils/fn.js":110}],83:[function(require,module,exports){
+},{"./clickable-component.js":29,"./component.js":31,"./utils/browser.js":104,"./utils/dom.js":107,"./utils/fn.js":109}],82:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -28971,7 +28493,7 @@ exports.autoSetup = autoSetup;
 exports.autoSetupTimeout = autoSetupTimeout;
 exports.hasLoaded = hasLoaded;
 
-},{"./utils/dom":108,"./utils/events.js":109,"global/document":18,"global/window":19}],84:[function(require,module,exports){
+},{"./utils/dom":107,"./utils/events.js":108,"global/document":17,"global/window":18}],83:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -29326,7 +28848,7 @@ var Slider = function (_Component) {
 _component2['default'].registerComponent('Slider', Slider);
 exports['default'] = Slider;
 
-},{"../component.js":32,"../utils/dom.js":108,"../utils/obj":115}],85:[function(require,module,exports){
+},{"../component.js":31,"../utils/dom.js":107,"../utils/obj":114}],84:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -29530,7 +29052,7 @@ function FlashRtmpDecorator(Flash) {
 
 exports['default'] = FlashRtmpDecorator;
 
-},{}],86:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -30689,7 +30211,7 @@ _component2['default'].registerComponent('Flash', Flash);
 _tech2['default'].registerTech('Flash', Flash);
 exports['default'] = Flash;
 
-},{"../component":32,"../utils/dom.js":108,"../utils/obj":115,"../utils/time-ranges.js":117,"../utils/url.js":119,"./flash-rtmp":85,"./tech":89,"global/window":19}],87:[function(require,module,exports){
+},{"../component":31,"../utils/dom.js":107,"../utils/obj":114,"../utils/time-ranges.js":116,"../utils/url.js":118,"./flash-rtmp":84,"./tech":88,"global/window":18}],86:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -32444,7 +31966,7 @@ _component2['default'].registerComponent('Html5', Html5);
 _tech2['default'].registerTech('Html5', Html5);
 exports['default'] = Html5;
 
-},{"../component":32,"../utils/browser.js":105,"../utils/dom.js":108,"../utils/fn.js":110,"../utils/log.js":113,"../utils/merge-options.js":114,"../utils/obj":115,"../utils/to-title-case.js":118,"../utils/url.js":119,"./tech.js":89,"global/document":18,"global/window":19,"tsml":27}],88:[function(require,module,exports){
+},{"../component":31,"../utils/browser.js":104,"../utils/dom.js":107,"../utils/fn.js":109,"../utils/log.js":112,"../utils/merge-options.js":113,"../utils/obj":114,"../utils/to-title-case.js":117,"../utils/url.js":118,"./tech.js":88,"global/document":17,"global/window":18,"tsml":26}],87:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -32534,7 +32056,7 @@ var MediaLoader = function (_Component) {
 _component2['default'].registerComponent('MediaLoader', MediaLoader);
 exports['default'] = MediaLoader;
 
-},{"../component.js":32,"../utils/to-title-case.js":118,"./tech.js":89}],89:[function(require,module,exports){
+},{"../component.js":31,"../utils/to-title-case.js":117,"./tech.js":88}],88:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -33916,7 +33438,7 @@ _component2['default'].registerComponent('MediaTechController', Tech);
 Tech.registerTech('Tech', Tech);
 exports['default'] = Tech;
 
-},{"../component":32,"../media-error.js":73,"../tracks/audio-track-list":90,"../tracks/html-track-element":93,"../tracks/html-track-element-list":92,"../tracks/text-track":99,"../tracks/text-track-list":97,"../tracks/video-track-list":103,"../utils/buffer.js":106,"../utils/fn.js":110,"../utils/log.js":113,"../utils/merge-options.js":114,"../utils/obj":115,"../utils/time-ranges.js":117,"global/document":18,"global/window":19,"videojs-vtt.js":121}],90:[function(require,module,exports){
+},{"../component":31,"../media-error.js":72,"../tracks/audio-track-list":89,"../tracks/html-track-element":92,"../tracks/html-track-element-list":91,"../tracks/text-track":98,"../tracks/text-track-list":96,"../tracks/video-track-list":102,"../utils/buffer.js":105,"../utils/fn.js":109,"../utils/log.js":112,"../utils/merge-options.js":113,"../utils/obj":114,"../utils/time-ranges.js":116,"global/document":17,"global/window":18,"videojs-vtt.js":120}],89:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -34099,7 +33621,7 @@ var AudioTrackList = function (_TrackList) {
 
 exports['default'] = AudioTrackList;
 
-},{"../utils/browser.js":105,"./track-list":101,"global/document":18}],91:[function(require,module,exports){
+},{"../utils/browser.js":104,"./track-list":100,"global/document":17}],90:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -34230,7 +33752,7 @@ var AudioTrack = function (_Track) {
 
 exports['default'] = AudioTrack;
 
-},{"../utils/browser.js":105,"../utils/merge-options":114,"./track":102,"./track-enums":100}],92:[function(require,module,exports){
+},{"../utils/browser.js":104,"../utils/merge-options":113,"./track":101,"./track-enums":99}],91:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -34380,7 +33902,7 @@ var HtmlTrackElementList = function () {
 
 exports['default'] = HtmlTrackElementList;
 
-},{"../utils/browser.js":105,"global/document":18}],93:[function(require,module,exports){
+},{"../utils/browser.js":104,"global/document":17}],92:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -34551,7 +34073,7 @@ HTMLTrackElement.ERROR = ERROR;
 
 exports['default'] = HTMLTrackElement;
 
-},{"../event-target":69,"../tracks/text-track":99,"../utils/browser.js":105,"global/document":18}],94:[function(require,module,exports){
+},{"../event-target":68,"../tracks/text-track":98,"../utils/browser.js":104,"global/document":17}],93:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -34705,7 +34227,7 @@ var TextTrackCueList = function () {
 
 exports['default'] = TextTrackCueList;
 
-},{"../utils/browser.js":105,"global/document":18}],95:[function(require,module,exports){
+},{"../utils/browser.js":104,"global/document":17}],94:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -35057,7 +34579,7 @@ var TextTrackDisplay = function (_Component) {
 _component2['default'].registerComponent('TextTrackDisplay', TextTrackDisplay);
 exports['default'] = TextTrackDisplay;
 
-},{"../component":32,"../utils/fn.js":110,"global/window":19}],96:[function(require,module,exports){
+},{"../component":31,"../utils/fn.js":109,"global/window":18}],95:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -35161,7 +34683,7 @@ var jsonToTextTracks = function jsonToTextTracks(json, tech) {
 
 exports['default'] = { textTracksToJson: textTracksToJson, jsonToTextTracks: jsonToTextTracks, trackToJson_: trackToJson_ };
 
-},{}],97:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -35267,7 +34789,7 @@ var TextTrackList = function (_TrackList) {
 
 exports['default'] = TextTrackList;
 
-},{"../utils/browser.js":105,"../utils/fn.js":110,"./track-list":101,"global/document":18}],98:[function(require,module,exports){
+},{"../utils/browser.js":104,"../utils/fn.js":109,"./track-list":100,"global/document":17}],97:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -35870,7 +35392,7 @@ _component2['default'].registerComponent('TextTrackSettings', TextTrackSettings)
 
 exports['default'] = TextTrackSettings;
 
-},{"../component":32,"../utils/dom":108,"../utils/fn":110,"../utils/log":113,"../utils/obj":115,"global/window":19}],99:[function(require,module,exports){
+},{"../component":31,"../utils/dom":107,"../utils/fn":109,"../utils/log":112,"../utils/obj":114,"global/window":18}],98:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36321,7 +35843,7 @@ TextTrack.prototype.allowedEvents_ = {
 
 exports['default'] = TextTrack;
 
-},{"../utils/browser.js":105,"../utils/fn.js":110,"../utils/log.js":113,"../utils/merge-options":114,"../utils/url.js":119,"./text-track-cue-list":94,"./track-enums":100,"./track.js":102,"global/window":19,"xhr":127}],100:[function(require,module,exports){
+},{"../utils/browser.js":104,"../utils/fn.js":109,"../utils/log.js":112,"../utils/merge-options":113,"../utils/url.js":118,"./text-track-cue-list":93,"./track-enums":99,"./track.js":101,"global/window":18,"xhr":126}],99:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36389,7 +35911,7 @@ var TextTrackMode = exports.TextTrackMode = {
   showing: 'showing'
 };
 
-},{}],101:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36624,7 +36146,7 @@ for (var event in TrackList.prototype.allowedEvents_) {
 
 exports['default'] = TrackList;
 
-},{"../event-target":69,"../utils/browser.js":105,"global/document":18}],102:[function(require,module,exports){
+},{"../event-target":68,"../utils/browser.js":104,"global/document":17}],101:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36768,7 +36290,7 @@ var Track = function (_EventTarget) {
 
 exports['default'] = Track;
 
-},{"../event-target":69,"../utils/browser.js":105,"../utils/guid.js":112,"global/document":18}],103:[function(require,module,exports){
+},{"../event-target":68,"../utils/browser.js":104,"../utils/guid.js":111,"global/document":17}],102:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36963,7 +36485,7 @@ var VideoTrackList = function (_TrackList) {
 
 exports['default'] = VideoTrackList;
 
-},{"../utils/browser.js":105,"./track-list":101,"global/document":18}],104:[function(require,module,exports){
+},{"../utils/browser.js":104,"./track-list":100,"global/document":17}],103:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -37093,7 +36615,7 @@ var VideoTrack = function (_Track) {
 
 exports['default'] = VideoTrack;
 
-},{"../utils/browser.js":105,"../utils/merge-options":114,"./track":102,"./track-enums":100}],105:[function(require,module,exports){
+},{"../utils/browser.js":104,"../utils/merge-options":113,"./track":101,"./track-enums":99}],104:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -37192,7 +36714,7 @@ var TOUCH_ENABLED = exports.TOUCH_ENABLED = Dom.isReal() && ('ontouchstart' in _
 
 var BACKGROUND_SIZE_SUPPORTED = exports.BACKGROUND_SIZE_SUPPORTED = Dom.isReal() && 'backgroundSize' in _window2['default'].document.createElement('video').style;
 
-},{"./dom":108,"global/window":19}],106:[function(require,module,exports){
+},{"./dom":107,"global/window":18}],105:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -37243,7 +36765,7 @@ function bufferedPercent(buffered, duration) {
    * @module buffer
    */
 
-},{"./time-ranges.js":117}],107:[function(require,module,exports){
+},{"./time-ranges.js":116}],106:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -37287,7 +36809,7 @@ function computedStyle(el, prop) {
    * @module computed-style
    */
 
-},{"global/window":19}],108:[function(require,module,exports){
+},{"global/window":18}],107:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -38186,7 +37708,7 @@ var $ = exports.$ = createQuerier('querySelector');
  */
 var $$ = exports.$$ = createQuerier('querySelectorAll');
 
-},{"./guid.js":112,"./log.js":113,"./obj":115,"global/document":18,"global/window":19,"tsml":27}],109:[function(require,module,exports){
+},{"./guid.js":111,"./log.js":112,"./obj":114,"global/document":17,"global/window":18,"tsml":26}],108:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -38645,7 +38167,7 @@ function one(elem, type, fn) {
   on(elem, type, func);
 }
 
-},{"./dom.js":108,"./guid.js":112,"./log.js":113,"global/document":18,"global/window":19}],110:[function(require,module,exports){
+},{"./dom.js":107,"./guid.js":111,"./log.js":112,"global/document":17,"global/window":18}],109:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -38722,7 +38244,7 @@ var throttle = exports.throttle = function throttle(fn, wait) {
   return throttled;
 };
 
-},{"./guid.js":112}],111:[function(require,module,exports){
+},{"./guid.js":111}],110:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -38776,7 +38298,7 @@ function formatTime(seconds) {
 
 exports['default'] = formatTime;
 
-},{}],112:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -38802,7 +38324,7 @@ function newGUID() {
   return _guid++;
 }
 
-},{}],113:[function(require,module,exports){
+},{}],112:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -38944,7 +38466,7 @@ log.warn = function () {
 
 exports['default'] = log;
 
-},{"./browser":105,"./obj":115,"global/window":19}],114:[function(require,module,exports){
+},{"./browser":104,"./obj":114,"global/window":18}],113:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -38994,7 +38516,7 @@ function mergeOptions() {
    * @module merge-options
    */
 
-},{"./obj":115}],115:[function(require,module,exports){
+},{"./obj":114}],114:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -39148,7 +38670,7 @@ function isPlain(value) {
   return isObject(value) && toString.call(value) === '[object Object]' && value.constructor === Object;
 }
 
-},{}],116:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -39198,7 +38720,7 @@ var setTextContent = exports.setTextContent = function setTextContent(el, conten
   }
 };
 
-},{"global/document":18}],117:[function(require,module,exports){
+},{"global/document":17}],116:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -39345,7 +38867,7 @@ function createTimeRanges(start, end) {
 
 exports.createTimeRange = createTimeRanges;
 
-},{"./log.js":113}],118:[function(require,module,exports){
+},{"./log.js":112}],117:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -39373,7 +38895,7 @@ function toTitleCase(string) {
 
 exports['default'] = toTitleCase;
 
-},{}],119:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -39548,7 +39070,7 @@ var isCrossOrigin = exports.isCrossOrigin = function isCrossOrigin(url) {
   return crossOrigin;
 };
 
-},{"global/document":18,"global/window":19}],120:[function(require,module,exports){
+},{"global/document":17,"global/window":18}],119:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -40271,7 +39793,7 @@ if (typeof define === 'function' && define.amd) {
 
 exports['default'] = videojs;
 
-},{"./component":32,"./event-target":69,"./extend.js":70,"./player":78,"./plugins.js":79,"./setup":83,"./tech/tech.js":89,"./tracks/audio-track.js":91,"./tracks/text-track.js":99,"./tracks/video-track.js":104,"./utils/browser.js":105,"./utils/computed-style.js":107,"./utils/dom.js":108,"./utils/events.js":109,"./utils/fn.js":110,"./utils/format-time.js":111,"./utils/log.js":113,"./utils/merge-options.js":114,"./utils/obj":115,"./utils/stylesheet.js":116,"./utils/time-ranges.js":117,"./utils/url.js":119,"global/document":18,"global/window":19,"xhr":127}],121:[function(require,module,exports){
+},{"./component":31,"./event-target":68,"./extend.js":69,"./player":77,"./plugins.js":78,"./setup":82,"./tech/tech.js":88,"./tracks/audio-track.js":90,"./tracks/text-track.js":98,"./tracks/video-track.js":103,"./utils/browser.js":104,"./utils/computed-style.js":106,"./utils/dom.js":107,"./utils/events.js":108,"./utils/fn.js":109,"./utils/format-time.js":110,"./utils/log.js":112,"./utils/merge-options.js":113,"./utils/obj":114,"./utils/stylesheet.js":115,"./utils/time-ranges.js":116,"./utils/url.js":118,"global/document":17,"global/window":18,"xhr":126}],120:[function(require,module,exports){
 /**
  * Copyright 2013 vtt.js Contributors
  *
@@ -40320,7 +39842,7 @@ if (!window.VTTCue) {
   vttjs.shim();
 }
 
-},{"./vtt.js":122,"./vttcue-extended.js":123,"./vttregion-extended.js":125}],122:[function(require,module,exports){
+},{"./vtt.js":121,"./vttcue-extended.js":122,"./vttregion-extended.js":124}],121:[function(require,module,exports){
 /**
  * Copyright 2013 vtt.js Contributors
  *
@@ -41656,7 +41178,7 @@ if (!window.VTTCue) {
 
 }(this, (this.vttjs || {})));
 
-},{}],123:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 /**
  * Copyright 2013 vtt.js Contributors
  *
@@ -41718,7 +41240,7 @@ if (typeof module !== "undefined" && module.exports) {
 
 }(this));
 
-},{"./vttcue":124}],124:[function(require,module,exports){
+},{"./vttcue":123}],123:[function(require,module,exports){
 /**
  * Copyright 2013 vtt.js Contributors
  *
@@ -42029,7 +41551,7 @@ if (typeof module !== "undefined" && module.exports) {
   vttjs.VTTCue = VTTCue;
 }(this, (this.vttjs || {})));
 
-},{}],125:[function(require,module,exports){
+},{}],124:[function(require,module,exports){
 /**
  * Copyright 2013 vtt.js Contributors
  *
@@ -42074,7 +41596,7 @@ if (typeof module !== "undefined" && module.exports) {
 
 }(this));
 
-},{"./vttregion":126}],126:[function(require,module,exports){
+},{"./vttregion":125}],125:[function(require,module,exports){
 /**
  * Copyright 2013 vtt.js Contributors
  *
@@ -42214,7 +41736,7 @@ if (typeof module !== "undefined" && module.exports) {
   vttjs.VTTRegion = VTTRegion;
 }(this, (this.vttjs || {})));
 
-},{}],127:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 "use strict";
 var window = require("global/window")
 var isFunction = require("is-function")
@@ -42451,7 +41973,7 @@ function getXml(xhr) {
 
 function noop() {}
 
-},{"global/window":19,"is-function":20,"parse-headers":23,"xtend":128}],128:[function(require,module,exports){
+},{"global/window":18,"is-function":19,"parse-headers":22,"xtend":127}],127:[function(require,module,exports){
 module.exports = extend
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;

@@ -12,6 +12,7 @@
   "devDependencies": {
     "browserify": "^13.1.0",
     "particles.js": "^2.0.0",
+    "uglifyjs": "^2.4.11",
     "video.js": "^5.19.2",
     "watchify": "^3.7.0"
   },
