@@ -4,7 +4,7 @@
 	<title>Hyperloop India</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"> 
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/nprogress.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -20,7 +20,7 @@
 
 
 <body>
-	
+
 	<div class='preloader'>
 		<ul class="cssload-body">
 			<li class='one'></li>
@@ -79,9 +79,9 @@
 			<style type="text/css">
 				.cta button {
 					background-color: transparent;
-					border: 1px solid white; 
+					border: 1px solid white;
 					font-weight: 600;
-					border-radius: 20px; 
+					border-radius: 20px;
 					outline: none !important;
 				}
 
@@ -99,41 +99,42 @@
 					<button class="btn btn-primary btn-block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
 				</div>
 			</div>
-		
-			
+
+
 		</div>
-		
-
-	</header> 
 
 
-	
+	</header>
+
+
+
 	<section class="sectionsFull" id="vision">
 		<div class="container-fluid">
 			<div class="row">
 				<h3 class="section-heading text-center">
-					Our Vision
+					Cars. Trains. Planes. Ships. What's next?
 				</h3>
 				<hr class="primary">
 			</div>
 			<div class="row wow">
-				<div class="col-md-12">
-					<video id="my-video" data-setup='{"controls": true, "autoplay": false, "preload": "auto","loop":true, "fluid": true}' class="video-js" poster="/assets/img/1.jpg">
-						<source src="/assets/video/final1.mp4" type='video/mp4'>
+				<div class="col-md-6">
+					<h5>
+						The Hyperloop is a new way to move people or things anywhere in the world quickly, safely, efficiently, on-demand and with minimal impact to the environment.
+						<br><br>
 
-							<p class="vjs-no-js">
-								To view this video please enable JavaScript, and consider upgrading to a web browser that
-								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-							</p>
-						</video>
-					</div>
-				</div>	
-
+						The system accelerates a passenger or cargo vehicle at airline speeds through a steel tube in near-vacuum using a linear electric motor.
+					</h5>
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive" src="/assets/img/whatsNext.png">
+				</div>
 			</div>
-		</section>
+
+		</div>
+	</section>
 		<style type="text/css">
 			#design {
-				background-color: #fff;
+				background-color: #eeedef;
 			}
 			.video-js {
 				background-color: transparent !important;
@@ -145,12 +146,12 @@
 
 				<div class="row">
 					<h3 class="section-heading text-center">
-						Design		
+						Design
 					</h3>
 					<hr class="primary">
 				</div>
 				<div class="row">
-					<div class="col-md-12">					
+					<div class="col-md-12">
 
 
 						<div class="owl-carousel owl-theme">
@@ -186,7 +187,7 @@
 
 
 
-				</div>				
+				</div>
 			</div>
 
 
@@ -202,35 +203,35 @@
 
 						<div class="row">
 							<h3 class="section-heading text-center color-white">
-								Work		
+								Work
 							</h3>
 							<hr class="primary-white">
 						</div>
 						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-							<div class="col-md-12">		
+							<div class="col-md-12">
 								<div class="owl-carousel-work owl-theme">
 									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
 									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
 									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
-									
+
 								</div>
 							</div>
 						</div>
 
 					</div>
 				</section>
-				
+
 				<section class="sections" id="team">
 					<div class="container-fluid">
 
 						<div class="row">
 							<h3 class="section-heading text-center">
-								Team		
+								Team
 							</h3>
 							<hr class="primary">
 						</div>
 						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-							<div class="col-md-12">		
+							<div class="col-md-12">
 								<div class="owl-carousel-team owl-theme">
 									<div class="item card_org text-center"><img class="" src="assets/img/bits.png"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/iim.png"></div>
@@ -238,7 +239,7 @@
 									<div class="item card_org text-center"><img class="" src="assets/img/nsit.png"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/isb.png"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/others.png"></div>
-									
+
 								</div>
 
 							</div>
@@ -258,14 +259,14 @@
 
 							<div class="row">
 								<h3 class="section-heading text-center color-white">
-									Join Us		
+									Join Us
 								</h3>
 								<hr class="primary-white">
 							</div>
 							<br>
 							<br>
 							<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-								<div class="col-md-12 text-center">		
+								<div class="col-md-12 text-center">
 									<h1>Dare to Dream?</h1>
 
 								</div>
@@ -284,19 +285,19 @@
 
 								<div class="row">
 									<h3 class="section-heading text-center">
-										Our Partners		
+										Our Partners
 									</h3>
 									<hr class="primary">
 								</div>
 								<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-									<div class="col-md-12">		
+									<div class="col-md-12">
 										<div class="owl-carousel-team owl-theme">
 
 											<div class="item text-center">
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -310,7 +311,7 @@
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -324,7 +325,7 @@
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -338,7 +339,7 @@
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -352,7 +353,7 @@
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -366,7 +367,7 @@
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -380,7 +381,7 @@
 												<div class="card project-wrapper hvr-float-shadow"  style="background-image: url('http://hyperloopindia.in/wp-content/uploads/2016/06/50948.jpg'); background-size: contain;">
 
 													<div class="project-details-wrapper">
-														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p> 
+														<h2><a href="#" target="_blank"><p>RITES LIMITED</p></a></h2> <p class="pull-right">Something...</p> <p><i>Something....</i></p>
 														<br>
 														<span> Established in 1974 by the Government of India, RITES Limited's initial charter was to provide consultancy services in rail transport management to operators in India and abroad. </span>
 														<br>
@@ -410,7 +411,7 @@
 							<div class="container-fluid">
 								<div class="row">
 									<h3 class="section-heading text-center color-white">
-										Say Hello	
+										Say Hello
 									</h3>
 									<hr class="primary-white">
 								</div>
@@ -426,7 +427,7 @@
 
 
 
-						
+
 
 						<footer id="foot">
 							<div class="container-fluid">
@@ -440,20 +441,20 @@
 										<h3 class="footer-heading">Links</h3>
 										<a href="/blog" class="footer-a" title="Blog">Blog</a><br>
 										<a href="/contact-us" class="footer-a" title="Contact Us">Contact Us</a><br>
-										
+
 
 
 									</div>
 									<div class="col-md-2">
-										<h3 class="footer-heading">Contact Us</h3>										
+										<h3 class="footer-heading">Contact Us</h3>
 										<a href="#" class="footer-a"> +91-9829118530</a><br>
 
 									</div>
 									<div class="col-md-3">
 										<h3 class="footer-heading">Follow Us</h3>
-										<a href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/6rqi2h839/1458285314_square_twitter.png?noCache=1458269179"></a> &nbsp; 
+										<a href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/6rqi2h839/1458285314_square_twitter.png?noCache=1458269179"></a> &nbsp;
 										<a target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s9.postimg.org/rpxq1v24r/1458285359_square_google_plus.png?noCache=1458269237"></a> &nbsp;
-										<a  target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/o93sp2nn9/1458285377_square_linkedin.png?noCache=1458269268"></a> 
+										<a  target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/o93sp2nn9/1458285377_square_linkedin.png?noCache=1458269268"></a>
 										&nbsp;
 										<a  target="_blank" href="https://www.facebook.com/hyperloopindia/" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s29.postimg.org/d32lll3ur/1458285303_square_facebook.png?noCache=1458269107"></a> <br>
 										<p style="margin-top: 20px;">
@@ -502,7 +503,7 @@
 							</div>
 							<div class="modal-content tm"><div class="embed-responsive embed-responsive-4by3">
 								<iframe class="embed-responsive-item"  id="viewvid" src="" frameborder="0" allowfullscreen></iframe>
-							</div>							
+							</div>
 
 						</div>
 					</div>
@@ -571,12 +572,12 @@
 
 
 						(function($) {
-							"use strict"; 
+							"use strict";
 
 
 							new WOW().init();
 
-						})(jQuery); 
+						})(jQuery);
 
 
 
@@ -587,9 +588,9 @@
 	function ytload(x)
 	{
 		$("#viewvid").attr("src", x+"?autoplay=1&rel=0");
-		$("#myModalvideoview").modal("show",  {backdrop: 'static'});	
+		$("#myModalvideoview").modal("show",  {backdrop: 'static'});
 		$('body').css('padding-right','');
-		
+
 	}
 
 	function closeit()

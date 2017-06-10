@@ -33,7 +33,7 @@ if (/Mobi/.test(navigator.userAgent))
  var videojs = require('video.js'); 
 
 
-var player = videojs('my-video');
+// var player = videojs('my-video');
 
 
 $(function(){
@@ -41,36 +41,36 @@ $(function(){
 	// video3[0].play();
 })
 
-var videos = $('#my-video_html5_api'),
-fraction = -0.2;
-function checkScroll() {
+// var videos = $('#my-video_html5_api'),
+// fraction = -0.2;
+// function checkScroll() {
 
-    for(var i = 0; i < videos.length; i++) {
+//     for(var i = 0; i < videos.length; i++) {
 
-        var video = videos[i];
+//         var video = videos[i];
 
-        var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
-            b = y + h, //bottom
-            visibleX, visibleY, visible;
+//         var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
+//             b = y + h, //bottom
+//             visibleX, visibleY, visible;
 
-            visibleX = (0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-            visibleY = (0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+//             visibleX = (0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+//             visibleY = (0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
 
-            visible = visibleX * visibleY / (w * h);
-           // console.log('scroll='+visible);
-            if (visible < fraction && visible > -1.2) {
-                video.play();
-            } else {
-                video.pause();
-            }
+//             visible = visibleX * visibleY / (w * h);
+//            // console.log('scroll='+visible);
+//             if (visible < fraction && visible > -1.2) {
+//                 video.play();
+//             } else {
+//                 video.pause();
+//             }
 
-    }
+//     }
 
-}
+// }
 if(!isMobile)
 {
-	window.addEventListener('scroll', checkScroll, false);
-	window.addEventListener('resize', checkScroll, false);
+	// window.addEventListener('scroll', checkScroll, false);
+	// window.addEventListener('resize', checkScroll, false);
 
 	$('#con_hit').attr('href', 'https://mail.google.com/mail/?view=cm&ui=2&tf=0&fs=1&to=info@hyperloopindia.in&su=Hello Hyperloop India!&body=Send your query to us.');
 }
