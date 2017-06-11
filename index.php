@@ -135,13 +135,13 @@
 	</section>
 	<div class="container-fluid">
 		<div class="row">
-				<div class="col-md-4" style="margin-bottom: 10px;">
+				<div class="col-md-4" style="margin-bottom: 50px;">
 					<img src="/assets/img/1t.png" alt="" class="img-responsive">
 				</div>
-				<div class="col-md-4" style="margin-bottom: 10px;">
+				<div class="col-md-4" style="margin-bottom: 50px;">
 					<img src="/assets/img/2t.png" alt="" class="img-responsive">
 				</div>
-				<div class="col-md-4" style="margin-bottom: 10px;">
+				<div class="col-md-4" style="margin-bottom: 50px;">
 					<img src="/assets/img/3t.png" alt="" class="img-responsive">
 				</div>
 			</div>
@@ -212,15 +212,15 @@
 
 
 
-				<section class="sections" id="work">
+			<!-- 	<section class="sections" id="work">
 					<div class="container-fluid backdrop">
 
-						<!-- <div class="row">
+						 <div class="row">
 							<h3 class="section-heading text-center color-white">
 								Work
 							</h3>
 							<hr class="primary-white">
-						</div> -->
+						</div>
 						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 							<div class="col-md-12">
 								<div class="owl-carousel-work owl-theme text-center">
@@ -233,7 +233,47 @@
 						</div>
 
 					</div>
-				</section>
+				</section> -->
+
+<style type="text/css">
+	.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+
+<div id="mycarousel" class="carousel slide" data-ride="carousel">
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item">
+        <img src="/assets/img/4w.png" data-color="lightblue" alt="First Image">
+
+    </div>
+    <div class="item">
+        <img src="/assets/img/5w.png" data-color="firebrick" alt="Second Image">
+
+    </div>
+    <div class="item">
+        <img src="/assets/img/6w.png" data-color="violet" alt="Third Image">
+
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
 
 				<section class="sections" id="team">
 					<div class="container-fluid">
@@ -623,4 +663,35 @@
 		var anim = 'fadeOut'
 		testAnim(anim);
 	})
+</script>
+
+
+<script type="text/javascript">
+
+	var $item = $('.carousel .item');
+var $wHeight = $(window).height();
+$item.eq(0).addClass('active');
+$item.height($wHeight);
+$item.addClass('full-screen');
+
+$('.carousel img').each(function() {
+  var $src = $(this).attr('src');
+  var $color = $(this).attr('data-color');
+  $(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  $(this).remove();
+});
+
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
+  $item.height($wHeight);
+});
+
+$('.carousel').carousel({
+  interval: 6000,
+  pause: "false"
+});
+
 </script>
