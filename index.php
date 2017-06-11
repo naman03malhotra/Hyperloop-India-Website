@@ -129,20 +129,23 @@
 					<img class="img-responsive" src="/assets/img/whatsNext.png">
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<img src="/assets/img/1t.png" alt="" class="img-responsive">
-				</div>
-				<div class="col-md-4">
-					<img src="/assets/img/2t.png" alt="" class="img-responsive">
-				</div>
-				<div class="col-md-4">
-					<img src="/assets/img/3t.png" alt="" class="img-responsive">
-				</div>
-			</div>
+
 
 		</div>
 	</section>
+	<div class="container-fluid">
+		<div class="row">
+				<div class="col-md-4" style="margin-bottom: 10px;">
+					<img src="/assets/img/1t.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-4" style="margin-bottom: 10px;">
+					<img src="/assets/img/2t.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-4" style="margin-bottom: 10px;">
+					<img src="/assets/img/3t.png" alt="" class="img-responsive">
+				</div>
+			</div>
+			</div>
 		<style type="text/css">
 			#design {
 				background-color: #eeedef;
