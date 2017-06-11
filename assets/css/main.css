@@ -19,7 +19,7 @@ header {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-} 
+}
 .color-black{
 	color: #303133;
 }
@@ -32,7 +32,7 @@ header {
 @media (min-width: 414px)
 {
 
-	.navbar-inverse 
+	.navbar-inverse
 	{
 		background-color: transparent;
 		border: none;
@@ -48,9 +48,9 @@ header {
 		padding: 100px;
 	}
 
-	.preloader ul 
-	{  
-		left: 45%;	  
+	.preloader ul
+	{
+		left: 45%;
 		margin-top: -80px;
 	}
 	.backdrop
@@ -63,7 +63,7 @@ header {
 
 @media (max-width: 414px)
 {
-	.navbar-inverse 
+	.navbar-inverse
 	{
 		background-color: #e8fdfe;
 		border: none;
@@ -88,13 +88,13 @@ header {
 	}
 
 	.preloader ul
-	{	
-		left: 35%;	    
+	{
+		left: 35%;
 		margin-top: -20%;
 	}
 }
 
-#top-content 
+#top-content
 {
 	position: absolute;
 
@@ -138,7 +138,7 @@ header {
 	background-image: url(../img/1.jpg);
 	background-size: cover;
 	width: 100%;
-	height: 100%;		   
+	height: 100%;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
 }
@@ -185,49 +185,49 @@ hr.primary-white
 		body::-webkit-scrollbar-thumb:active{
 			background-color:#1a7d90;
 			border:1px solid #155965;
-		} 
+		}
 
 		/*
 		Css for twitter card
 		*/
 
-		.user-name 
+		.user-name
 		{
 			font-size: 18px;
 		}
-		.card-footer 
+		.card-footer
 		{
 			padding: 0.75rem 1.25rem;
 			background-color: #fff;
-			border-top: 1px solid rgba(0, 0, 0, 0.12); 
+			border-top: 1px solid rgba(0, 0, 0, 0.12);
 		}
 		.card-image
 		{
 			text-align: center;
 		}
-		.card-content 
+		.card-content
 		{
 			padding: 15px;
 		}
-		.card-body 
+		.card-body
 		{
 			min-height: 88px;
 		}
-		.card_org 
+		.card_org
 		{
 			border: 0;
 			margin: 10px;
 			box-shadow: 0 1px 1px 0 rgba(0,0,0,0.07),0 1px 1px -2px rgba(0,0,0,.02),0 1px 5px 0 rgba(0,0,0,.02);
 			transition: all 0.4s ease;
 			-webkit-transition: all 0.4s ease;
-			
+
 		}
-		.card_org:hover 
-		{	
+		.card_org:hover
+		{
 			border: 0;
 			box-shadow: 0 11px 16px 0 rgba(23,84,111,0.18);
 		}
-		.card 
+		.card
 		{
 			border: 0;
 			margin: 10px;
@@ -238,8 +238,8 @@ hr.primary-white
 			background-size: cover;
 			background-position: center;
 		}
-		.card:hover 
-		{	
+		.card:hover
+		{
 			border: 0;
 			//box-shadow: 0 11px 16px 0 rgba(23,84,111,0.18);
 		}
@@ -249,10 +249,10 @@ hr.primary-white
 			margin-top: 8px;
 		}
 
-		
 
 
-		
+
+
 		.project-details-wrapper {
 			text-align: left;
 			position: absolute;
@@ -284,7 +284,7 @@ hr.primary-white
 			font-size: 3vh;
 			margin-bottom: 20px;
 			margin-bottom: 2vw;
-			
+
 			line-height: 22px;
 			line-height: 2.2vw;
 			text-transform: none;
@@ -295,7 +295,7 @@ hr.primary-white
 			height: 20px;
 		}
 		.project-details-wrapper label {
-			
+
 			color: #ffffff;
 			font-size: 11px;
 			font-size: 1.1vw;
@@ -309,7 +309,7 @@ hr.primary-white
 		}
 		.page-content .project-details-wrapper ul li {
 			color: #ffffff;
-			
+
 			font-size: 11px;
 			font-size: 1.1vw;
 			line-height: 13px;
@@ -354,16 +354,16 @@ hr.primary-white
 		a, a:hover, a:focus {
 			color: #ffffff;
 		}
-		
+
 		blockquote, .blockquote-reverse{
 			background: #f9f9f9;
 			border-color: #00BCD4;
 			padding: 0.5em 10px;
-			
+
 		}
 		blockquote:before {
 			color: #ccc;
-			
+
 			font-size: 4em;
 			line-height: 0.1em;
 			margin-right: 0.25em;
@@ -374,7 +374,7 @@ hr.primary-white
 			display: inline;
 		}
 
-		.color-primary 
+		.color-primary
 		{
 			color:#00BCD4;
 		}
@@ -394,10 +394,10 @@ hr.primary-white
 		{
 			height: 35px;
 		}
-		.btn-primary 
+		.btn-primary
 		{
 			background-color: #00BCD4;
-			
+
 		}
 		.btn-skills
 		{
@@ -661,8 +661,8 @@ hr.primary-white
    }
 
    .onoffswitch3-switch {
-   	display: block; width: 18px; margin: 0px; text-align: center; 
-   	border: 0px solid #999999;border-radius: 0px; 
+   	display: block; width: 18px; margin: 0px; text-align: center;
+   	border: 0px solid #999999;border-radius: 0px;
    	position: absolute; top: 0; bottom: 0;
    }
    .onoffswitch3-active .onoffswitch3-switch {
@@ -673,13 +673,13 @@ hr.primary-white
    }
 
    .onoffswitch3-active .onoffswitch3-switch:before {
-   	content: " "; position: absolute; top: 0; left: 18px; 
+   	content: " "; position: absolute; top: 0; left: 18px;
    	border-style: solid; border-color: #27A1CA transparent transparent #27A1CA; border-width: 15px 9px;
    }
 
 
    .onoffswitch3-inactive .onoffswitch3-switch:before {
-   	content: " "; position: absolute; top: 0; right: 18px; 
+   	content: " "; position: absolute; top: 0; right: 18px;
    	border-style: solid; border-color: transparent #A1A1A1 #A1A1A1 transparent; border-width: 15px 9px;
    }
 
@@ -708,8 +708,8 @@ hr.primary-white
 
    .preloader ul {
    	text-align: center;
-   	font-size: 0;  
-   	position: absolute;   
+   	font-size: 0;
+   	position: absolute;
    	top: 50%;
 
    }
@@ -862,7 +862,7 @@ nprogress - css
 	height: 175px;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
-} 
+}
 #team .card_org{
 	border-radius: 50%;
 	padding: 50px;
@@ -877,7 +877,7 @@ nprogress - css
 	margin: 100px -10px;
 	padding: 50px;
 }
-.owl-carousel h5{
+.owl-carousel-work h5, .owl-carousel-work h4, .owl-carousel-work h3 {
 	color: #fff;
 }
 #join{
@@ -922,7 +922,7 @@ footer{
 	background-color: #151515;
 
 	width: 100%;
-	padding: 10px;  
+	padding: 10px;
 	color: #696969;
 }
 .footer-abv{
@@ -948,7 +948,7 @@ footer{
 
 
 
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus 
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus
 {
     color: #303133;
 }

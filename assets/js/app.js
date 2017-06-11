@@ -15,7 +15,7 @@ Nprogress loading bar
  * partcles js load
  */
 
-var particlesJS = require('particlesJS');
+// require('particles.js');
 
 /**
  * Bootstrap loading
@@ -107,9 +107,9 @@ else
 
 
 
-particlesJS.load('part', 'assets/particles.json', function() {
-	//console.log('callback - particles.js config loaded');
-});
+// particlesJS.load('part', 'assets/particles.json', function() {
+// 	//console.log('callback - particles.js config loaded');
+// });
 
 
 var ar = ["<i class='fa fa-quote-left'></i> Something classy about us ... <i class='fa fa-quote-right'></i>",

@@ -21,7 +21,7 @@
 
 <body>
 
-	<div class='preloader'>
+<!-- 	<div class='preloader'>
 		<ul class="cssload-body">
 			<li class='one'></li>
 			<li class='two'></li>
@@ -29,7 +29,7 @@
 			<li class='four'></li>
 			<li class='five'></li>
 		</ul>
-	</div>
+	</div> -->
 
 	<header id="header-top" class="sections">
 
@@ -129,6 +129,17 @@
 					<img class="img-responsive" src="/assets/img/whatsNext.png">
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<img src="/assets/img/1t.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-4">
+					<img src="/assets/img/2t.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-4">
+					<img src="/assets/img/3t.png" alt="" class="img-responsive">
+				</div>
+			</div>
 
 		</div>
 	</section>
@@ -201,18 +212,18 @@
 				<section class="sections" id="work">
 					<div class="container-fluid backdrop">
 
-						<div class="row">
+						<!-- <div class="row">
 							<h3 class="section-heading text-center color-white">
 								Work
 							</h3>
 							<hr class="primary-white">
-						</div>
+						</div> -->
 						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 							<div class="col-md-12">
-								<div class="owl-carousel-work owl-theme">
-									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
-									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
-									<div class="item"><h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. In January 2016, our team from BITS was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in College Station, Texas.</h5></div>
+								<div class="owl-carousel-work owl-theme text-center">
+									<div class="item"> <h3>Designed and Made in India.</h3><h4> We have partnered with best in Bangaluru to co-create our design for India's first Hyperloop pod vehicle.</h4></div>
+									<div class="item"><h3>Workbench Projects</h3><h4> Workbench Projects is Bangaluru's first Fablab makerspace, having 5000 sq ft of creative space right under the Halasuru Metro Station.</h4></div>
+									<div class="item"><h3>Ripple Technologies</h3><h4> Ripple Technologies, is a prominent engineering service provider offering machining and inspection facilites in Bangaluru's manufacturing hub, Peenya Industrial Area.</h4></div>
 
 								</div>
 							</div>

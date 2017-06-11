@@ -20,8 +20,7 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
     "jquery-scrollify": "^1.0.7",
-    "nprogress": "^0.2.0",
-    "particles.js": "^2.0.0"
+    "nprogress": "^0.2.0"
   },
   "author": "Naman",
   "license": "ISC"
