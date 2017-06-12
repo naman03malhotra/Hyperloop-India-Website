@@ -133,16 +133,43 @@
 
 		</div>
 	</section>
+	<style type="text/css">
+		.row .elon {
+
+		margin-bottom: 50px;
+    height: 300px;
+		}
+		.elon h4 {
+			color: #fff;
+			margin: 78px 47px;
+
+		}
+
+
+
+	</style>
 	<div class="container-fluid">
-		<div class="row">
-				<div class="col-md-4" style="margin-bottom: 50px;">
-					<img src="/assets/img/1t.png" alt="" class="img-responsive">
+		<div class="row text-center">
+				<div class="col-md-4 elon" style="background: url(/assets/img/1t.png) no-repeat center/100%;border-right: 3px solid white;">
+					<h4 class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">The Hyperloop was
+proposed as an open design
+challenge by <b>Tesla/Spacex
+CEO Elon Musk</b> in a white
+paper in 2013.</h4>
 				</div>
-				<div class="col-md-4" style="margin-bottom: 50px;">
-					<img src="/assets/img/2t.png" alt="" class="img-responsive">
+				<div class="col-md-4 elon" style="background: url(/assets/img/2t.png) no-repeat center/100%;border-right: 3px solid white;">
+					<h4 class="wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">The Hyperloop was
+proposed as an open design
+challenge by Tesla/Spacex
+CEO Elon Musk in a white
+paper in 2013.</h4>
 				</div>
-				<div class="col-md-4" style="margin-bottom: 50px;">
-					<img src="/assets/img/3t.png" alt="" class="img-responsive">
+				<div class="col-md-4 elon" style="background: url(/assets/img/3t.png) no-repeat center/100%;">
+					<h4 class="wow fadeInUp" data-wow-delay="1.2s" data-wow-duration="1s">Hyperloop India is the first and only
+team from India, and one of the two
+from Asia that has been selected
+to build and race their Hyperloop pod
+on the Spacex track.</h4>
 				</div>
 			</div>
 			</div>
@@ -168,7 +195,7 @@
 					<div class="col-md-12">
 
 
-						<div class="owl-carousel owl-theme">
+				<!-- 		<div class="owl-carousel owl-theme">
 								<div class="item">
 									<video id="my-video-design-1" data-setup='{"autoplay": true, "loop":true, "fluid": true}' class="video-js" >
 										<source src="/assets/video/rotate.mp4" type='video/mp4'>
@@ -197,7 +224,7 @@
 								</div>
 
 
-							</div>
+							</div> -->
 
 
 
