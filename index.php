@@ -195,7 +195,7 @@ on the Spacex track.</h4>
 					<div class="col-md-12">
 
 
-				<!-- 		<div class="owl-carousel owl-theme">
+						<div class="owl-carousel owl-theme">
 								<div class="item">
 									<video id="my-video-design-1" data-setup='{"autoplay": true, "loop":true, "fluid": true}' class="video-js" >
 										<source src="/assets/video/rotate.mp4" type='video/mp4'>
@@ -224,7 +224,7 @@ on the Spacex track.</h4>
 								</div>
 
 
-							</div> -->
+							</div>
 
 
 
