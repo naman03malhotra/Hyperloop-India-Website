@@ -268,24 +268,40 @@ on the Spacex track.</h4>
   background-position: center;
   background-repeat: no-repeat;
 }
+.carousel-caption{
+	top: 36%;
+}
+
 </style>
 
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#mycarousel" data-slide-to="1"></li>
+    <li data-target="#mycarousel" data-slide-to="2"></li>
 
+  </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item">
         <img src="/assets/img/4w.png" data-color="lightblue" alt="First Image">
-
+        <div class="carousel-caption">
+            <h3>First Image</h3>
+        </div>
     </div>
     <div class="item">
         <img src="/assets/img/5w.png" data-color="firebrick" alt="Second Image">
-
+        <div class="carousel-caption">
+            <h3>Second Image</h3>
+        </div>
     </div>
     <div class="item">
         <img src="/assets/img/6w.png" data-color="violet" alt="Third Image">
-
+        <div class="carousel-caption">
+            <h3>Third Image</h3>
+        </div>
     </div>
 
   </div>
@@ -302,6 +318,128 @@ on the Spacex track.</h4>
 </div>
 
 
+
+<section class="sections" id="about">
+	<div class="container-fluid">
+
+		<div class="row">
+			<h3 class="section-heading text-center">
+				About Us
+			</h3>
+			<hr class="primary">
+		</div>
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-12 text-center">
+				<h5>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.</h5>
+
+			</div>
+		</div>
+
+
+
+	</div>
+</section>
+<style type="text/css">
+	.img-responsive{
+		margin: auto;
+	}
+</style>
+
+
+<section class="sections" id="sponsors">
+	<div class="container-fluid">
+
+		<div class="row">
+			<h3 class="section-heading text-center">
+				Sponsors
+			</h3>
+			<hr class="primary">
+		</div>
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-12 text-center">
+				<img class="img-responsive" src="/assets/img/7.1.png">
+
+			</div>
+		</div>
+		<br>
+		<br>
+
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-4 text-center">
+				<img class="img-responsive" src="/assets/img/7.2.png">
+
+			</div>
+
+			<div class="col-md-4 text-center">
+				<img class="img-responsive" src="/assets/img/7.3.png">
+
+			</div>
+			<div class="col-md-4 text-center">
+				<img class="img-responsive" src="/assets/img/7.4.png">
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+</section>
+
+
+
+
+<section class="sections" id="partners_new">
+	<div class="container-fluid">
+
+		<div class="row">
+			<h3 class="section-heading text-center">
+				Partners
+			</h3>
+			<hr class="primary">
+		</div>
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-6 text-center">
+				<img class="img-responsive" src="/assets/img/8.1.png">
+
+			</div>
+			<div class="col-md-6 text-center">
+				<img class="img-responsive" src="/assets/img/8.2.png">
+
+			</div>
+		</div>
+		<br>
+		<br>
+
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-4 text-center">
+				<img class="img-responsive" src="/assets/img/8.3.png">
+
+			</div>
+
+			<div class="col-md-4 text-center">
+				<img class="img-responsive" src="/assets/img/8.4.png">
+
+			</div>
+			<div class="col-md-4 text-center">
+				<img class="img-responsive" src="/assets/img/8.5.png">
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+</section>
+
+
+
+
+
+
+
+
 				<section class="sections" id="team">
 					<div class="container-fluid">
 
@@ -316,7 +454,7 @@ on the Spacex track.</h4>
 								<div class="owl-carousel-team owl-theme">
 									<div class="item card_org text-center"><img class="" src="assets/img/bits.png"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/iim.png"></div>
-									<div class="item card_org text-center"><img class="" src="assets/img/nid.png"></div>
+									<div class="item card_org text-center"><img class="" src="assets/img/nid.jpg"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/nsit.png"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/isb.png"></div>
 									<div class="item card_org text-center"><img class="" src="assets/img/others.png"></div>
@@ -327,13 +465,18 @@ on the Spacex track.</h4>
 						</div>
 						<br>
 						<br>
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-md-6 col-md-offset-3">
 								<button id="dwl_hit" class="btn btn-primary btn-lg btn-block"> Meet The People</button></div>
 							</div>
 
-						</div>
+						</div> -->
 					</section>
+
+
+
+
+
 
 					<section class="sections" id="join">
 						<div class="container-fluid backdrop">
@@ -361,7 +504,9 @@ on the Spacex track.</h4>
 
 							</div>
 					</section>
-						<section class="sections" id="partners">
+
+
+<!-- 						<section class="sections" id="partners">
 							<div class="container-fluid">
 
 								<div class="row">
@@ -483,7 +628,7 @@ on the Spacex track.</h4>
 
 							</div>
 						</section>
-
+ -->
 
 
 
