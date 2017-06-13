@@ -141,7 +141,7 @@
 		}
 		.elon h4 {
 			color: #fff;
-			margin: 78px 47px;
+			padding-top: 100px;
 
 		}
 
@@ -158,11 +158,12 @@ CEO Elon Musk</b> in a white
 paper in 2013.</h4>
 				</div>
 				<div class="col-md-4 elon" style="background: url(/assets/img/2t.png) no-repeat center/100%;border-right: 3px solid white;">
-					<h4 class="wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">The Hyperloop was
-proposed as an open design
-challenge by Tesla/Spacex
-CEO Elon Musk in a white
-paper in 2013.</h4>
+					<h4 class="wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">In 2016, Spacex built a one mile
+Hyperloop vacuum track in California,
+& challenged student teams all over
+the world to build Hyperloop pods to
+race on this track.
+</h4>
 				</div>
 				<div class="col-md-4 elon" style="background: url(/assets/img/3t.png) no-repeat center/100%;">
 					<h4 class="wow fadeInUp" data-wow-delay="1.2s" data-wow-duration="1s">Hyperloop India is the first and only
@@ -682,7 +683,7 @@ on the Spacex track.</h4>
 										<a target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s9.postimg.org/rpxq1v24r/1458285359_square_google_plus.png?noCache=1458269237"></a> &nbsp;
 										<a  target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/o93sp2nn9/1458285377_square_linkedin.png?noCache=1458269268"></a>
 										&nbsp;
-										<a  target="_blank" href="https://www.facebook.com/hyperloopindia/" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s29.postimg.org/d32lll3ur/1458285303_square_facebook.png?noCache=1458269107"></a> <br>
+										<a  target="_blank" href="https://www.facebook.com/teamhyperloopindia/" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s29.postimg.org/d32lll3ur/1458285303_square_facebook.png?noCache=1458269107"></a> <br>
 										<p style="margin-top: 20px;">
 
 
