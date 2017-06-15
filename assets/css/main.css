@@ -884,8 +884,8 @@ nprogress - css
 	background-image: url(../img/team1.jpg) !important;
 	background-attachment: fixed;
 	background:rgba(0,0,0,0.6);
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(100%);
+	//-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	//filter: grayscale(100%);
 
 	width: 100%;
 	min-height: 100vh;

@@ -136,7 +136,7 @@
 	<style type="text/css">
 		.row .elon {
 
-		margin-bottom: 50px;
+		//margin-bottom: 50px;
     height: 300px;
 		}
 		.elon h4 {
@@ -148,7 +148,7 @@
 
 
 	</style>
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-bottom: 50px;">
 		<div class="row text-center">
 				<div class="col-md-4 elon" style="background: url(/assets/img/1t.png) no-repeat center/100%;border-right: 3px solid white;">
 					<h4 class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">The Hyperloop was
@@ -275,12 +275,12 @@ on the Spacex track.</h4>
 
 </style>
 
-<div id="mycarousel" class="carousel slide" data-ride="carousel">
+<div id="work" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#mycarousel" data-slide-to="1"></li>
-    <li data-target="#mycarousel" data-slide-to="2"></li>
+    <li data-target="#work" data-slide-to="0" class="active"></li>
+    <li data-target="#work" data-slide-to="1"></li>
+    <li data-target="#work" data-slide-to="2"></li>
 
   </ol>
 
@@ -289,30 +289,33 @@ on the Spacex track.</h4>
     <div class="item">
         <img src="/assets/img/4w.png" data-color="lightblue" alt="First Image">
         <div class="carousel-caption">
-            <h3>First Image</h3>
+            <h3>Designed and Made in India
+We have partnered with the best in India, to co-create our design for India’s first Hyperloop pod vehicle.</h3>
         </div>
     </div>
     <div class="item">
         <img src="/assets/img/5w.png" data-color="firebrick" alt="Second Image">
         <div class="carousel-caption">
-            <h3>Second Image</h3>
+            <h3>Workbench Projects is Bengaluru’s first Fablab makerspace, having 5000 sq ft of creative space right under the Halasuru Metro Station.
+</h3>
         </div>
     </div>
     <div class="item">
         <img src="/assets/img/6w.png" data-color="violet" alt="Third Image">
         <div class="carousel-caption">
-            <h3>Third Image</h3>
+            <h3>Ripple Technologies is a prominent engineering services provider offering machining and inspection facilities
+in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
         </div>
     </div>
 
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#work" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+  <a class="right carousel-control" href="#work" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -331,7 +334,7 @@ on the Spacex track.</h4>
 		</div>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-12 text-center">
-				<h5>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.</h5>
+				<h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers. They come from varied yet interconnected fields of engineering and business and are interested in reinventing transportation in India. In  2016, our team was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in California.</h5>
 
 			</div>
 		</div>
@@ -500,7 +503,7 @@ on the Spacex track.</h4>
 							<br>
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3">
-									<a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-re btn-lg btn-block"> Apply</a></div>
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a></div>
 								</div>
 
 							</div>
