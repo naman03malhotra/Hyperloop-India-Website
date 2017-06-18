@@ -194,6 +194,9 @@ on the Spacex track.</h4>
 			.video-js {
 				background-color: transparent !important;
 			}
+			#design p{
+				padding: 4%;
+			}
 		</style>
 
 		<section class="sections" id="design">
