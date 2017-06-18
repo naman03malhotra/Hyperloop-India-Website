@@ -69,7 +69,7 @@
 
 						<li class="hvr-underline-from-center"><a href="#sponsors">PARTNERS</a></li>
 						<li class="hvr-underline-from-center"><a href="#vision">VISION</a></li>
-						<li class="hvr-underline-from-center"><a href="#contact">CONTACT</a></li>
+						<li class="hvr-underline-from-center"><a href="#foot">CONTACT</a></li>
 						<!-- <li class="hvr-float-shadow active"><a href="#contact">Connect</a></li> -->
 
 					</ul>
@@ -466,7 +466,11 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 
 
 
-
+<style type="text/css">
+	#team img:hover{
+		//box-shadow: 0 11px 16px 0 rgba(23,84,111,0.18);
+	}
+</style>
 
 
 
@@ -482,12 +486,16 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 							<div class="col-md-12">
 								<div class="owl-carousel-team owl-theme">
-									<div class="item card_org text-center"><img class="" src="assets/img/bits.png"></div>
-									<div class="item card_org text-center"><img class="" src="assets/img/iim.png"></div>
-									<div class="item card_org text-center"><img class="" src="assets/img/nid.jpg"></div>
-									<div class="item card_org text-center"><img class="" src="assets/img/nsit.png"></div>
-									<div class="item card_org text-center"><img class="" src="assets/img/isb.png"></div>
-									<div class="item card_org text-center"><img class="" src="assets/img/others.png"></div>
+									<div class="item text-center"><img class="" src="assets/img/bits.png"></div>
+
+									<div class="item text-center"><img class="" src="assets/img/nid.jpg"></div>
+									<div class="item text-center"><img class="" src="assets/img/nsit.png"></div>
+									<div class="item text-center"><img class="" src="assets/img/rvce.png"></div>
+									<div class="item text-center"><img class="" src="assets/img/iim.png"></div>
+									<div class="item text-center"><img class="" src="assets/img/xaviers.png"></div>
+									<div class="item text-center"><img class="" src="assets/img/symbiosis.png"></div>
+									<div class="item text-center"><img class="" src="assets/img/isb.png"></div>
+
 
 								</div>
 
@@ -509,23 +517,27 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 
 
 					<section class="sections" id="vision">
-						<div class="container-fluid backdrop">
+						<div class="container-fluid">
 
-							<div class="row">
+							<!-- <div class="row">
 								<h3 class="section-heading text-center color-white">
 									Vision
 								</h3>
 								<hr class="primary-white">
-							</div>
+							</div> -->
 							<br>
 							<br>
 
 							<br>
 							<br>
-							<div class="row">
+							<br>
+							<br>
+							<br>
+
+							<div class="row text-center">
 								<div class="col-md-6 col-md-offset-3">
 									<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a> -->
-									<button class="btn btn- btn-big-blue btn-lg btn-block block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
+									<button class="btn btn-big-blue btn-lg block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')" style="color:#444;">Our Vision</button>
 									</div>
 								</div>
 
@@ -660,7 +672,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 
 
 
-						<section class="sectionsFull" id="contact">
+						<!-- <section class="sectionsFull" id="contact">
 							<div class="container-fluid">
 								<div class="row">
 									<h3 class="section-heading text-center color-white">
@@ -675,7 +687,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 								</div>
 							</div>
 
-						</section>
+						</section> -->
 
 
 
@@ -685,12 +697,12 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 						<footer id="foot">
 							<div class="container-fluid">
 								<div class="col-md-10 col-md-offset-1">
-									<div class="col-md-5">
+									<!-- <div class="col-md-5">
 										<a href="/"><img src="/assets/img/logo.png" style="width:300px;filter: invert(100%);"></a>
 										<h4 class="footer-a">A STEP TOWARDS BRINGING THE HYPERLOOP TO INDIA.</h4>
 
-									</div>
-									<div class="col-md-2">
+									</div> -->
+									<div class="col-md-4">
 										<h3 class="footer-heading">Links</h3>
 										<a href="/blog" class="footer-a" title="Blog">Blog</a><br>
 										<a href="/contact-us" class="footer-a" title="Contact Us">Contact Us</a><br>
@@ -698,12 +710,12 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 
 
 									</div>
-									<div class="col-md-2">
+									<div class="col-md-4">
 										<h3 class="footer-heading">Contact</h3>
 										<a href="#" class="footer-a"> +91-9829118530</a><br>
 
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<h3 class="footer-heading">Follow Us</h3>
 										<a target="_blank" href="https://www.facebook.com/teamhyperloopindia/" style="font-size: 30px"><i class="fa fa-facebook-square"></i></a> &nbsp;
 										<a target="_blank" href="https://www.instagram.com/hyperloopindia" style="font-size: 30px;"><i class="fa fa-instagram"></i></a> &nbsp;
@@ -728,7 +740,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 								</div>
 							</div>
 
-						</footer>
+						</footer >
 						<div class="container-fluid footer-end">
 							<div class="col-md-12 text-center">
 								<i class="fa fa-copyright"></i> 2017 Hyperllop India/ <a target="_blank" class="footer-a" / <a target="_blank" class="footer-a" href="/terms-and-conditions">Terms & Conditions</a> / <a target="_blank" class="footer-a" href="/privacy-policy">Privacy Policy</a>
