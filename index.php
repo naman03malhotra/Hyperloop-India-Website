@@ -525,17 +525,9 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 								</h3>
 								<hr class="primary-white">
 							</div> -->
-							<br>
-							<br>
-
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
 
 							<div class="row text-center">
-								<div class="col-md-6 col-md-offset-3">
+								<div class="col-md-6 col-md-offset-3" style="margin-top: 195px;">
 									<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a> -->
 									<button class="btn btn-big-blue btn-lg block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')" style="color:#444;">Our Vision</button>
 									</div>
