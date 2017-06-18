@@ -17,7 +17,14 @@
 
 
 </head>
-
+<style type="text/css">
+	.btn-big-blue {
+		box-shadow: none !important;
+		border-radius: 31px !important;
+		background-color: transparent !important;
+		border: 1px #00BCD4 solid;
+	}
+</style>
 
 <body>
 
@@ -77,12 +84,15 @@
 			</h4> -->
 
 			<style type="text/css">
-				.cta button {
+				.cta {
 					background-color: transparent;
 					border: 1px solid white;
 					font-weight: 600;
 					border-radius: 20px;
 					outline: none !important;
+				}
+				.cta:hover {
+					color: #fff;
 				}
 
 				.modal.fade{
@@ -95,8 +105,8 @@
 				}
 			</style>
 			<div class="col-md-2 col-md-offset-5" style="margin-top: 250px;">
-				<div class="cta text-center">
-					<button class="btn btn-primary btn-block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
+				<div class="text-center">
+					<button class="cta btn btn-primary btn-block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
 				</div>
 			</div>
 
@@ -361,7 +371,7 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 		</div>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-12 text-center">
-				<img class="img-responsive" src="/assets/img/7.1.png">
+				<a target="_blank" href="http://hyperloop-one.com/"><img class="img-responsive" src="/assets/img/7.1.png"></a>
 
 			</div>
 		</div>
@@ -370,16 +380,16 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-4 text-center">
-				<img class="img-responsive" src="/assets/img/7.2.png">
+				<a target="_blank" href="http://skf.com/in/"><img class="img-responsive" src="/assets/img/7.2.png"></a>
 
 			</div>
 
 			<div class="col-md-4 text-center">
-				<img class="img-responsive" src="/assets/img/7.3.png">
+				<a target="_blank" href="http://workbenchprojects.com/"><img class="img-responsive" src="/assets/img/7.3.png"></a>
 
 			</div>
 			<div class="col-md-4 text-center">
-				<img class="img-responsive" src="/assets/img/7.4.png">
+				<a target="_blank" href="http://rippletechnologies.co.in/"><img class="img-responsive" src="/assets/img/7.4.png"></a>
 
 			</div>
 		</div>
@@ -404,11 +414,11 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 		</div>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-6 text-center">
-				<img class="img-responsive" src="/assets/img/8.1.png">
+				<a target="_blank" href="hhttp://bmrc.co.in/english/"><img class="img-responsive" src="/assets/img/8.1.png"></a>
 
 			</div>
 			<div class="col-md-6 text-center">
-				<img class="img-responsive" src="/assets/img/8.2.png">
+				<a target="_blank" href="https://www.tralaw.in/"><img class="img-responsive" src="/assets/img/8.2.png"></a>
 
 			</div>
 		</div>
@@ -417,16 +427,16 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-4 text-center">
-				<img class="img-responsive" src="/assets/img/8.3.png">
+				<a target="_blank" href="http://ritesltd.com/"><img class="img-responsive" src="/assets/img/8.3.png"></a>
 
 			</div>
 
 			<div class="col-md-4 text-center">
-				<img class="img-responsive" src="/assets/img/8.4.png">
+				<a target="_blank" href="http://www.investindia.gov.in/"><img class="img-responsive" src="/assets/img/8.4.png"></a>
 
 			</div>
 			<div class="col-md-4 text-center">
-				<img class="img-responsive" src="/assets/img/8.5.png">
+				<a target="_blank" href="http://bemlindia.com/"><img class="img-responsive" src="/assets/img/8.5.png"></a>
 
 			</div>
 		</div>
@@ -645,9 +655,9 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 									</h3>
 									<hr class="primary-white">
 								</div>
-								<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+								<div class="row wow fadeInUp">
 									<div class="col-md-4"></div>
-									<div class="col-md-4 "><a target="_blank" id="con_hit" class="btn btn-big-re btn-lg btn-block"><i class="fa fa-globe"></i> &nbsp; Connect</a></div>
+									<div class="col-md-4"><a target="_blank" id="con_hit" class="btn cta btn-lg btn-block"> Connect</a></div>
 
 								</div>
 							</div>
