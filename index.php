@@ -503,12 +503,7 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 							</div>
 							<br>
 							<br>
-							<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-								<div class="col-md-12 text-center">
-									<h1>Dare to Dream?</h1>
 
-								</div>
-							</div>
 							<br>
 							<br>
 							<div class="row">
