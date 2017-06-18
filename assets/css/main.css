@@ -814,7 +814,7 @@ nprogress - css
 }
 
 
- #courses, #design, #work {
+ #about, #courses, #design, #work {
 
 	border-bottom: 2px solid #dddddd;
 }
@@ -880,7 +880,7 @@ nprogress - css
 .owl-carousel-work h5, .owl-carousel-work h4, .owl-carousel-work h3 {
 	color: #fff;
 }
-#join{
+#vision{
 	background-image: url(../img/team1.jpg) !important;
 	background-attachment: fixed;
 	background:rgba(0,0,0,0.6);

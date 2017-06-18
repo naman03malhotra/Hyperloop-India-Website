@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+	<link rel="shortcut icon" href="/assets/img/icon.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -58,15 +59,16 @@
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav navbar-right">
 
-						<li class="hvr-underline-from-center"><a href="#vision">VISION</a></li>
+
 
 						<li class="hvr-underline-from-center"><a href="#design">DESIGN</a></li>
 
 						<li class="hvr-underline-from-center"><a href="#work">WORK</a></li>
-						<li class="hvr-underline-from-center"><a href="#join">JOIN US</a></li>
+						<li class="hvr-underline-from-center"><a href="#about">ABOUT</a></li>
 						<li class="hvr-underline-from-center"><a href="#team">PEOPLE</a></li>
-						<li class="hvr-underline-from-center"><a href="#join">JOIN US</a></li>
-						<li class="hvr-underline-from-center"><a href="#partners">PARTNERS</a></li>
+
+						<li class="hvr-underline-from-center"><a href="#sponsors">PARTNERS</a></li>
+						<li class="hvr-underline-from-center"><a href="#vision">VISION</a></li>
 						<li class="hvr-underline-from-center"><a href="#contact">CONTACT</a></li>
 						<!-- <li class="hvr-float-shadow active"><a href="#contact">Connect</a></li> -->
 
@@ -106,7 +108,8 @@
 			</style>
 			<div class="col-md-2 col-md-offset-5" style="margin-top: 250px;">
 				<div class="text-center">
-					<button class="cta btn btn-primary btn-block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
+					<a target="_blank" class="cta btn btn-primary btn-lg" href="http://www.ketto.org/hyperloopindia">Join the loop</a>
+
 				</div>
 			</div>
 
@@ -118,7 +121,7 @@
 
 
 
-	<section class="sectionsFull" id="vision">
+	<section class="sectionsFull" id="">
 		<div class="container-fluid">
 			<div class="row">
 				<h3 class="section-heading text-center">
@@ -185,7 +188,7 @@ on the Spacex track.</h4>
 			</div>
 			</div>
 		<style type="text/css">
-			#design {
+			#design, #about {
 				background-color: #eeedef;
 			}
 			.video-js {
@@ -217,7 +220,7 @@ on the Spacex track.</h4>
 											</p>
 									</video>
 										<p>
-										ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.
+										The OrcaPod is India's first and only entry to the SpaceX Hyperloop Pod Design Competition. It promises to be India's first indigenously built safe, feasible, Hyperloop pod prototype designed to be tested and raced on the Hyperloop test track built by SpaceX in Hawthorne, California in August 2017.in professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.
 										</p>
 								</div>
 								<div class="item" >
@@ -230,7 +233,7 @@ on the Spacex track.</h4>
 											</p>
 									</video>
 									<p>
-										ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.
+										The challenges of the full-scale Hyperloop in India were considered central to the design philosophy, and a top-down approach was taken to best demonstrate core features of the full-scale model  like fail-safe magnetic levitation & braking, aerodynamics, lightweight structure, electronics & power systems at competition scale.
 									</p>
 								</div>
 
@@ -300,13 +303,13 @@ on the Spacex track.</h4>
         <img src="/assets/img/4w.png" data-color="lightblue" alt="First Image">
         <div class="carousel-caption">
             <h3>Designed and Made in India
-We have partnered with the best in India, to co-create our design for India’s first Hyperloop pod vehicle.</h3>
+We have partnered with the best in India, to co-create our design for India's first Hyperloop pod vehicle.</h3>
         </div>
     </div>
     <div class="item">
         <img src="/assets/img/5w.png" data-color="firebrick" alt="Second Image">
         <div class="carousel-caption">
-            <h3>Workbench Projects is Bengaluru’s first Fablab makerspace, having 5000 sq ft of creative space right under the Halasuru Metro Station.
+            <h3>Workbench Projects is Bengaluru's first Fablab makerspace, having 5000 sq ft of creative space right under the Halasuru Metro Station.
 </h3>
         </div>
     </div>
@@ -314,7 +317,7 @@ We have partnered with the best in India, to co-create our design for India’s 
         <img src="/assets/img/6w.png" data-color="violet" alt="Third Image">
         <div class="carousel-caption">
             <h3>Ripple Technologies is a prominent engineering services provider offering machining and inspection facilities
-in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
+in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
         </div>
     </div>
 
@@ -348,6 +351,16 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 
 			</div>
 		</div>
+		<!-- <br>
+		<br>
+		<div class="row text-center">
+			<div class="col-md-6">
+				<a class="btn btn-lg btn-big-blue" href="">Download Brochure</a>
+			</div>
+			<div class="col-md-6">
+				<a class="btn btn-lg btn-big-blue" href="">Download Brochure</a>
+			</div>
+		</div> -->
 
 
 
@@ -492,12 +505,12 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 
 
 
-					<section class="sections" id="join">
+					<section class="sections" id="vision">
 						<div class="container-fluid backdrop">
 
 							<div class="row">
 								<h3 class="section-heading text-center color-white">
-									Join Us
+									Vision
 								</h3>
 								<hr class="primary-white">
 							</div>
@@ -508,7 +521,9 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 							<br>
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3">
-									<a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a></div>
+									<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a> -->
+									<button class="btn btn- btn-big-blue btn-lg btn-block block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')">Our Vision</button>
+									</div>
 								</div>
 
 							</div>
@@ -681,17 +696,17 @@ in Bengaluru’s manufacturing hub, Peenya Industrial Area.</h3>
 
 									</div>
 									<div class="col-md-2">
-										<h3 class="footer-heading">Contact Us</h3>
+										<h3 class="footer-heading">Contact</h3>
 										<a href="#" class="footer-a"> +91-9829118530</a><br>
 
 									</div>
 									<div class="col-md-3">
 										<h3 class="footer-heading">Follow Us</h3>
-										<a href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/6rqi2h839/1458285314_square_twitter.png?noCache=1458269179"></a> &nbsp;
-										<a target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s9.postimg.org/rpxq1v24r/1458285359_square_google_plus.png?noCache=1458269237"></a> &nbsp;
-										<a  target="_blank" href="" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s10.postimg.org/o93sp2nn9/1458285377_square_linkedin.png?noCache=1458269268"></a>
-										&nbsp;
-										<a  target="_blank" href="https://www.facebook.com/teamhyperloopindia/" style="color:#9ec459;text-decoration:none;text-decoration:none !important;color:#9ec459;text-decoration:none;font-weight:bold;"><img src="https://s29.postimg.org/d32lll3ur/1458285303_square_facebook.png?noCache=1458269107"></a> <br>
+										<a target="_blank" href="https://www.facebook.com/teamhyperloopindia/" style="font-size: 30px"><i class="fa fa-facebook-square"></i></a> &nbsp;
+										<a target="_blank" href="https://www.instagram.com/hyperloopindia" style="font-size: 30px;"><i class="fa fa-instagram"></i></a> &nbsp;
+										<a target="_blank" href="https://www.linkedin.com/company/hyperloop-india" style="font-size: 30px;"><i class="fa fa-linkedin-square"></i></a> &nbsp;
+										<a target="_blank" href="https://twitter.com/HyperloopInd" style="font-size: 30px;"><i class="fa fa-twitter-square"></i></a> &nbsp;
+										<br>
 										<p style="margin-top: 20px;">
 
 
