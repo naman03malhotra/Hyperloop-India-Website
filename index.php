@@ -553,7 +553,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 							<div class="row text-center">
 								<div class="col-md-6 col-md-offset-3" style="margin-top: 195px;">
 									<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a> -->
-									<button class="btn btn-big-blue btn-lg block"  href="http://www.ketto.org/hyperloopindia" style="color:#444;">Support Us</button>
+									<a target="_blank" class="btn btn-big-blue btn-lg block"  href="http://www.ketto.org/hyperloopindia" style="color:#444;">Support Us</a>
 									</div>
 								</div>
 
