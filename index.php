@@ -25,7 +25,7 @@
 
   <!--Open Graph Meta tags -->
 
-  <meta property="og:title" content="Join 101 Hack 51 on HackerRank">
+  <meta property="og:title" content="Hyperloop India :: Bringing the Hyperloop to India">
   <meta property="og:url" content="https://hyperloopindia.in">
   <meta property="og:image" content="/assets/img/1.jpg">
   <meta property="og:site_name" content="HyperloopIndia" />
