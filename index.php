@@ -150,7 +150,7 @@
 	<style type="text/css">
 		.row .elon {
 
-		//margin-bottom: 50px;
+
     height: 300px;
 		}
 		.elon h4 {
@@ -158,11 +158,14 @@
 			padding-top: 100px;
 
 		}
+		.btn-lg {
+			padding: 8px 80px;
+		}
 
 
 
 	</style>
-	<div class="container-fluid" style="margin-bottom: 50px;">
+	<div class="container-fluid" >
 		<div class="row text-center">
 				<div class="col-md-4 elon" style="background: url(/assets/img/1t.png) no-repeat center/100%;border-right: 3px solid white;">
 					<h4 class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">The Hyperloop was
@@ -224,7 +227,7 @@ on the Spacex track.</h4>
 											</p>
 									</video>
 										<p>
-										The OrcaPod is India's first and only entry to the SpaceX Hyperloop Pod Design Competition. It promises to be India's first indigenously built safe, feasible, Hyperloop pod prototype designed to be tested and raced on the Hyperloop test track built by SpaceX in Hawthorne, California in August 2017.in professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.
+										The OrcaPod is India's first and only entry to the SpaceX Hyperloop Pod Design Competition. It promises to be India's first indigenously built safe, feasible, Hyperloop pod prototype designed to be tested and raced on the Hyperloop test track built by SpaceX in Hawthorne, California in August 2017.
 										</p>
 								</div>
 								<div class="item" >
@@ -237,7 +240,7 @@ on the Spacex track.</h4>
 											</p>
 									</video>
 									<p>
-										The challenges of the full-scale Hyperloop in India were considered central to the design philosophy, and a top-down approach was taken to best demonstrate core features of the full-scale model  like fail-safe magnetic levitation & braking, aerodynamics, lightweight structure, electronics & power systems at competition scale.
+										The challenges of the full-scale Hyperloop in India were considered central to the design philosophy, and a top-down approach was taken to best demonstrate core features of the full-scale model  like magnetic levitation & braking, aerodynamics, lightweight structure, electronics & power systems at competition scale.
 									</p>
 								</div>
 
