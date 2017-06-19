@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hyperloop India</title>
+	<title>Hyperloop India :: Bringing the Hyperloop to India</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
@@ -15,6 +15,23 @@
 	<link rel="shortcut icon" href="/assets/img/icon.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="title" content="Hyperloop India :: Bringing the Hyperloop to India">
+  <meta name="keywords" content="Hyperloop, OrcaPod, Elon Musk, Hyperloop India, Hyperloop One ">
+  <meta name="description" content="The Hyperloop is a new way to move people or things anywhere in the world quickly, safely, efficiently, on-demand and with minimal impact to the environment.">
+  <meta name="publisher" content="https://hyperloopindia.in">
+  <meta name="copyright" content="https://hyperloopindia.in">
+  <link rel="canonical" href="https://hyperloopindia.in" />
+  <meta name="classification" content="Hyperloop, Tech" />
+
+  <!--Open Graph Meta tags -->
+
+  <meta property="og:title" content="Join 101 Hack 51 on HackerRank">
+  <meta property="og:url" content="https://hyperloopindia.in">
+  <meta property="og:image" content="/assets/img/1.jpg">
+  <meta property="og:site_name" content="HyperloopIndia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="The Hyperloop is a new way to move people or things anywhere in the world quickly, safely, efficiently, on-demand and with minimal impact to the environment.">
+  <meta name="mobile-web-app-capable" content="yes">
 
 
 </head>
@@ -747,8 +764,8 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 						</div>
 
 
-						<script src="bundle.js" type="text/javascript"></script>
-						<script src="assets/js/sine.js" type="text/javascript"></script>
+						<script src="bundle.min.js" type="text/javascript"></script>
+
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 						<script src="https://ecounsellors.in/js/wow.min.js" type="text/javascript"></script>
 
