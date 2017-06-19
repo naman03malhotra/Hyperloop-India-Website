@@ -741,7 +741,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 										<p style="margin-top: 20px;">
 
 
-											<a class="btn footer-button footer-a" target="_blank" href="https://mail.google.com/mail/?view=cm&ui=2&tf=0&fs=1&to=info@hyperloopindia.in&su=Hi I am seeking for help.&body=My query is regarding ___"> info@hyperloopindia.in</a> <br><br>
+											<a class="btn footer-button footer-a" target="_blank" id="con_hit" > info@hyperloopindia.in</a> <br><br>
 
 
 
