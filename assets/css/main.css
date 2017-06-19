@@ -528,8 +528,8 @@ hr.primary-white
    nav.navbar-findcond button.navbar-toggle:hover { border:1px #303133 solid; }
    nav.navbar-findcond button.navbar-toggle > span.icon-bar { background: #303133; }
    nav.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-   	color: #2d6e9d;
-   	background-color: #ffffff;
+   	color: #fff;
+   	background-color: #00bcd4;
    }
 
    nav.navbar-findcond ul.dropdown-menu { border: 0; background: #fff; border-radius: 4px; margin: 4px 0; box-shadow: 0 0 4px 0 #fff; }

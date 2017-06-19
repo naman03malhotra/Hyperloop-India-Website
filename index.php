@@ -68,8 +68,9 @@
 						<li class="hvr-underline-from-center"><a href="#team">PEOPLE</a></li>
 
 						<li class="hvr-underline-from-center"><a href="#sponsors">PARTNERS</a></li>
-						<li class="hvr-underline-from-center"><a href="#vision">VISION</a></li>
+
 						<li class="hvr-underline-from-center"><a href="#foot">CONTACT</a></li>
+						<li class="hvr-float-shadow active"><a href="#vision">SUPPORT US</a></li>
 						<!-- <li class="hvr-float-shadow active"><a href="#contact">Connect</a></li> -->
 
 					</ul>
@@ -79,8 +80,8 @@
 		</nav>
 		<canvas id="waves"></canvas>
 
-		<div id="top-content" class="wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.5s">
-			<h1 class="color-black">ACCELERATING INDIA</h1><br>
+		<div id="top-content">
+			<h1 class="color-black">Bringing the Hyperloop To India</h1><br>
 		<!-- 	<h4 id="texter">
 				<i class='fa fa-quote-left'></i> Something classy about us ...<i class='fa fa-quote-right'></i>
 			</h4> -->
@@ -350,7 +351,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 		</div>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-12 text-center">
-				<h5>Founded in 2015 by Sibesh Kar, a student of BITS Pilani, Team Hyperloop India is a unique non-profit think tank consisting of 60+ motivated student volunteers. They come from varied yet interconnected fields of engineering and business and are interested in reinventing transportation in India. In  2016, our team was the only fully-funded team from India to make it to the SpaceX Hyperloop Design Weekend in California.</h5>
+				<h5>Founded in 2015 by a small group of students from BITS Pilani, Team Hyperloop India is a unique multi-disciplinary multi-university think tank consisting of 60+ motivated student volunteers in the fields of engineering and business, interested in reinventing transportation in India. As a primarily student collaboration, our plan is to leverage our performance in global incentive prize competitions to leapfrog transportation in India.</h5>
 
 			</div>
 		</div>
@@ -484,7 +485,10 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 							<hr class="primary">
 						</div>
 						<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-							<div class="col-md-12">
+							<div class="col-md-12 text-center">
+							<h6>We're a multidisciplinary team drawing from some of the top engineering, design & business schools of the country.</h6>
+							<br>
+							<br>
 								<div class="owl-carousel-team owl-theme">
 									<div class="item text-center"><img class="" src="assets/img/bits.png"></div>
 
@@ -529,7 +533,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 							<div class="row text-center">
 								<div class="col-md-6 col-md-offset-3" style="margin-top: 195px;">
 									<!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSde4nwbdaCtIvTzosISHHMfRYfMuvj_FmCsZqw--m3J7FreUw/closedform" id="dwl_hit" target="_blank" class="btn btn-big-blue btn-lg btn-block"> Apply</a> -->
-									<button class="btn btn-big-blue btn-lg block" onClick="ytload('https://www.youtube.com/embed/dU4fb1A2UMA')" style="color:#444;">Our Vision</button>
+									<button class="btn btn-big-blue btn-lg block" onClick="ytload('https://www.youtube.com/embed/R2Eb02S82cc')" style="color:#444;">Support Us</button>
 									</div>
 								</div>
 
