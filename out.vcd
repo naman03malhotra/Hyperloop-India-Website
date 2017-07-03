@@ -1,0 +1,55 @@
+$date
+  Mon, 03 Jul 2017 18:36:04 +0530
+$end
+$version
+  nvc 1.3-devel
+$end
+$timescale
+  1 fs
+$end
+$scope module tb $end
+$var reg 1 ! a_in $end
+$var reg 1 " b_in $end
+$var reg 1 # q_out $end
+$scope module dut $end
+$var reg 1 $ a $end
+$var reg 1 % b $end
+$var reg 1 & q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+#0
+bx !
+bx "
+bx #
+bx $
+bx %
+bx &
+$end
+b0 #
+b0 &
+b0 !
+b0 $
+b0 "
+b0 %
+#1000000
+b1 #
+b1 &
+b1 "
+b1 %
+#2000000
+b1 !
+b1 $
+bx "
+bx %
+#3000000
+b1 "
+b1 %
+#4000000
+b0 #
+b0 &
+b0 !
+b0 $
+b0 "
+b0 %
