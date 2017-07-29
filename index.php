@@ -438,7 +438,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 				<a target="_blank" href="http://hindustanuniv.ac.in/"><img style="width: 330px;margin-bottom: 20px;" class="img-responsive" src="/assets/img/7.5.png"></a>
 			</div>
 			<div class="col-md-6 text-center">
-				<a target="_blank" href="http://http://www.miracle.net.in/"><img style="width: 330px;margin-bottom: 20px;" class="img-responsive" src="/assets/img/7.6.png"></a>
+				<a target="_blank" href="http://www.miracle.net.in/"><img style="width: 330px;margin-bottom: 20px;" class="img-responsive" src="/assets/img/7.6.png"></a>
 
 			</div>
 		</div>
