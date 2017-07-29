@@ -430,6 +430,18 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 
 			</div>
 		</div>
+		<br>
+		<br>
+
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-6 text-center">
+				<a target="_blank" href="http://hindustanuniv.ac.in//"><img class="img-responsive" src="/assets/img/7.5.png"></a>
+			</div>
+			<div class="col-md-6 text-center">
+				<a target="_blank" href="http://http://www.miracle.net.in/"><img class="img-responsive" src="/assets/img/7.6.png"></a>
+
+			</div>
+		</div>
 
 
 
@@ -759,7 +771,7 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 						</footer >
 						<div class="container-fluid footer-end">
 							<div class="col-md-12 text-center">
-								<i class="fa fa-copyright"></i> 2017 Hyperllop India/ <a target="_blank" class="footer-a" / <a target="_blank" class="footer-a" href="/terms-and-conditions">Terms & Conditions</a> / <a target="_blank" class="footer-a" href="/privacy-policy">Privacy Policy</a>
+								<i class="fa fa-copyright"></i> 2017 Hyperloop India/ <a target="_blank" class="footer-a" / <a target="_blank" class="footer-a" href="/terms-and-conditions">Terms & Conditions</a> / <a target="_blank" class="footer-a" href="/privacy-policy">Privacy Policy</a>
 							</div>
 						</div>
 
