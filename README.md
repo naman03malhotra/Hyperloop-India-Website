@@ -15,7 +15,7 @@ Custom designed Hyperloop website.
 
 ### Dependencies
 
-letsconnect.co uses a number of open source projects to work properly:
+hyperloopindia.in uses a number of open source projects to work properly:
 - Any Server of your choice.
 - Node(V 5.9.1) and NPM(v3.7.3) to build dependencies.
 - [Browserify](http://browserify.org/) - Lets you require('modules') in the browser by bundling up all of your dependencies.
@@ -41,4 +41,4 @@ $ npm run watch
 ```
 
 ### Contact
-If you have any doubts/queries please connect with me at [https://letsconnect.co](https://letsconnect.co)
+If you have any doubts/queries please connect with us on our Email: info@hyperloopindia.in
