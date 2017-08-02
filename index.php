@@ -402,54 +402,119 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 
 		<div class="row">
 			<h3 class="section-heading text-center">
-				Sponsors
+				Platinum Sponsor
 			</h3>
 			<hr class="primary">
 		</div>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-12 text-center">
-				<a target="_blank" href="http://hyperloop-one.com/"><img class="img-responsive" src="/assets/img/7.1.png"></a>
+				<a target="_blank" href="http://hyperloop-one.com/"><img class="img-responsive" src="/assets/img/hyperloopone.png"></a>
 
 			</div>
 		</div>
+
+	</div>
+
 		<br>
 		<br>
+		<br>
+
+	<div class="container-fluid">
+		<div class="row">
+			<h3 class="section-heading text-center">
+				Gold Sponsors
+			</h3>
+			<hr class="primary">
+		</div>
+
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://workbenchprojects.com/"><img class="img-responsive" src="/assets/img/workbench.png"></a>
+
+			</div>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://rippletechnologies.co.in/"><img class="img-responsive" src="/assets/img/ripple.png"></a>
+
+			</div>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://www.cornerstoneindia.in/"><img class="img-responsive" src="/assets/img/cornerstone.png"></a>
+
+			</div>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://www.tatatrusts.org/"><img class="img-responsive" src="/assets/img/tatatrusts.png"></a>
+			</div>
+
+		</div>
+	</div>
+
+		<br>
+		<br>
+		<br>
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<h3 class="section-heading text-center">
+				Silver Sponsors
+			</h3>
+			<hr class="primary">
+		</div>
 
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-4 text-center">
-				<a target="_blank" href="http://skf.com/in/"><img class="img-responsive" src="/assets/img/7.2.png"></a>
-
-			</div>
-
-			<div class="col-md-4 text-center">
-				<a target="_blank" href="http://workbenchprojects.com/"><img class="img-responsive" src="/assets/img/7.3.png"></a>
+				<a target="_blank" href="http://www.marutee.com/"><img class="img-responsive" src="/assets/img/marutee.png"></a>
 
 			</div>
 			<div class="col-md-4 text-center">
-				<a target="_blank" href="http://rippletechnologies.co.in/"><img class="img-responsive" src="/assets/img/7.4.png"></a>
+				<a target="_blank" href="http://www.geotrixteam.com/"><img class="img-responsive" src="/assets/img/geotrix.png"></a>
+			</div>
+			<div class="col-md-4 text-center">
+				<a target="_blank" href="http://www.reflexisinc.com/"><img class="img-responsive" src="/assets/img/reflexis.png"></a>
 
 			</div>
+
 		</div>
 		<br>
 		<br>
-
+		<br>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-6 text-center">
-				<a target="_blank" href="http://hindustanuniv.ac.in/"><img style="width: 330px;margin-bottom: 20px;" class="img-responsive" src="/assets/img/7.5.png"></a>
+				<a target="_blank" href="https://hindustanuniv.ac.in"><img class="img-responsive" src="/assets/img/hindustanuniv.png"></a>
+
 			</div>
 			<div class="col-md-6 text-center">
-				<a target="_blank" href="http://www.miracle.net.in/"><img style="width: 330px;margin-bottom: 20px;" class="img-responsive" src="/assets/img/7.6.png"></a>
+				<a target="_blank" href="http://www.inoxcva.com/"><img class="img-responsive" src="/assets/img/inoxcva.png"></a>
+			</div>
+		</div>
+	<div>
+	<div class="container-fluid">
+		<div class="row">
+			<h3 class="section-heading text-center">
+				Bronze Sponsors
+			</h3>
+			<hr class="primary">
+		</div>
+
+		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+			<div class="col-md-4 text-center">
+				<a target="_blank" href="https://www.ikix.in/"><img class="img-responsive" src="/assets/img/ikix.png"></a>
+
+			</div>
+			<div class="col-md-4 text-center">
+				<a target="_blank" href="http://www.skf.com/in/index.html"><img class="img-responsive" src="/assets/img/skf.png"></a>
+
+			</div>
+			<div class="col-md-4 text-center">
+				<a target="_blank" href="http://www.miracle.net.in/"><img class="img-responsive" src="/assets/img/miracle.png"></a>
 
 			</div>
 		</div>
-
+	</div>
 
 
 
 	</div>
 </section>
-
-
 
 
 <section class="sections" id="partners_new">
@@ -462,30 +527,39 @@ in Bengaluru's manufacturing hub, Peenya Industrial Area.</h3>
 			<hr class="primary">
 		</div>
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			<div class="col-md-6 text-center">
-				<a target="_blank" href="hhttp://bmrc.co.in/english/"><img class="img-responsive" src="/assets/img/8.1.png"></a>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://ritesltd.com/"><img class="img-responsive" src="/assets/img/rites.png"></a>
 
 			</div>
-			<div class="col-md-6 text-center">
-				<a target="_blank" href="https://www.tralaw.in/"><img class="img-responsive" src="/assets/img/8.2.png"></a>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://www.investindia.gov.in/"><img class="img-responsive" src="/assets/img/investindia.png"></a>
+
+			</div>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="https://www.tralaw.in/"><img class="img-responsive" src="/assets/img/tralaw.png"></a>
+
+			</div>
+			<div class="col-md-3 text-center">
+				<a target="_blank" href="http://bemlindia.com/"><img class="img-responsive" src="/assets/img/beml.png"></a>
 
 			</div>
 		</div>
+
 		<br>
 		<br>
 
 		<div class="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 			<div class="col-md-4 text-center">
-				<a target="_blank" href="http://ritesltd.com/"><img class="img-responsive" src="/assets/img/8.3.png"></a>
+				<a target="_blank" href="http://webtopup.bmrc.co.in/Home/Home.aspx"><img class="img-responsive" src="/assets/img/bmrcl.png"></a>
 
 			</div>
 
 			<div class="col-md-4 text-center">
-				<a target="_blank" href="http://www.investindia.gov.in/"><img class="img-responsive" src="/assets/img/8.4.png"></a>
+				<a target="_blank" href="http://www.peenyaindustries.org/"><img class="img-responsive" src="/assets/img/peenya.png"></a>
 
 			</div>
 			<div class="col-md-4 text-center">
-				<a target="_blank" href="http://bemlindia.com/"><img class="img-responsive" src="/assets/img/8.5.png"></a>
+				<a target="_blank" href="http://www.airindia.in/"><img class="img-responsive" src="/assets/img/airindia.png"></a>
 
 			</div>
 		</div>
